@@ -1,0 +1,94 @@
+/* WebSocket Notification Styles */
+.delegation-expired-toast {
+  max-width: 400px;
+  padding: 0;
+}
+
+.toast-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.toast-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.toast-message {
+  margin-bottom: 8px;
+  line-height: 1.4;
+  color: #92400e;
+}
+
+.toast-details {
+  font-size: 14px;
+  color: #b45309;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.toast-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.toast-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toast-btn.primary {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.toast-btn.primary:hover {
+  background-color: #d97706;
+}
+
+.toast-btn.secondary {
+  background-color: transparent;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+}
+
+.toast-btn.secondary:hover {
+  background-color: #fef3c7;
+}
+
+/* WebSocket connection status indicator */
+.websocket-status {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.websocket-status.connected {
+  background-color: #10b981;
+  color: white;
+}
+
+.websocket-status.disconnected {
+  background-color: #ef4444;
+  color: white;
+}
+
+.websocket-status.connecting {
+  background-color: #f59e0b;
+  color: white;
+}

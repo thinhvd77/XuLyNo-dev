@@ -1,0 +1,517 @@
+case_id,customer_code,customer_name,debt_group,outstanding_debt,state,case_type,assigned_employee_code
+00f0585a-fea5-4b32-bc1c-d9c0bebdb1d9,6.42E+12,Cty TNHH SX TM Đồ Gỗ Tân Trường Phát,5,34030137427,beingFollowedUp,external,642100261
+01f900f3-396b-44fa-89a4-ebaccb71ee26,6.42E+12,Cty TNHH TM ĐT Hoa Quả Sơn,1,0,beingFollowedUp,internal,642100556
+026ece4e-9126-4443-97bc-b2851fae37e0,6.42E+12,Nguyễn Thị Ngọc Yến,3,31587424,beingFollowedUp,external,642100545
+03704040-62dd-4e67-84b7-b78f12132caa,6.22E+12,Đặng Văn Đạt,1,76000000,beingFollowedUp,internal,622100300
+037a9331-1e7e-478d-ba42-40925cc46579,6.42E+12,Cty TNHH Vương Diễm 97,1,0,beingFollowedUp,internal,642100529
+038c9d31-429a-4126-a47e-3b2361a40fe0,6.22E+12,Tống Đình Thắng,1,1500000000,beingFollowedUp,internal,622100302
+04d3f0ce-9f06-458b-b6dc-eb9be2a584db,1.61E+12,Cty TNHH UMSORA,5,6788000000,beingFollowedUp,external,160500558
+052d9e01-657a-4b53-b654-55e30ba702a7,6.22E+12,Nguyễn Ngọc Hiệp,1,2255000000,beingFollowedUp,internal,622100301
+085624cc-bf24-4052-b94e-325f8e7c36b8,6.22E+12,Phạm Phú Huy,1,270000000,beingFollowedUp,internal,622100301
+0960e7a4-311d-40d5-87a2-7e86718a49af,6.42E+12,Cty CP TM KT Và ĐT Sài Gòn,5,1.16E+11,beingFollowedUp,external,642100556
+0a26cf17-8843-4e5f-908f-12bcd06df80a,6.42E+12,Trần Nguyễn Thanh Loan,5,3900000000,beingFollowedUp,external,642100261
+0a52fc1c-444e-4958-b6d8-e31236e35be0,6.42E+12,Nguyễn Thị Ngọc Mỹ,3,260000000,beingFollowedUp,external,642100564
+0a81699e-b304-46eb-87d4-c09c017bb72d,1.61E+12,CTy TNHH XD TM An Thịnh,3,25122950105,beingFollowedUp,external,160500558
+0a9e2327-2b75-435a-8511-cb32db5e5a45,1.61E+12,CTy TNHH Lập Đạt Tư,1,0,beingFollowedUp,internal,160500558
+0ab56f55-3b65-4500-8fdc-8e46f081c035,1.61E+12,Nguyễn Phú Quốc,1,2500000,beingFollowedUp,internal,160500556
+0b0085f1-7d45-4b30-857a-6ab8a3a1526d,6.22E+12,Trần Đức Lương,1,250000000,beingFollowedUp,internal,622100282
+0b812179-54c6-42f1-9089-a6ac742359ca,6.42E+12,Cty CP XD Mộc Phát,1,3997000000,beingFollowedUp,internal,642100535
+0bc2b8b2-fbce-4990-adf6-b94b2773f762,6.42E+12,Nghiêm Minh Tâm,1,40000000,beingFollowedUp,internal,642100545
+0c00c57a-76e3-4d63-ab9e-ceab2b3c3956,6.22E+12,Võ Thị Bích Hoa,1,3530000000,beingFollowedUp,internal,622100302
+0cba3010-b7b6-4b05-b783-b7bb7430a306,6.22E+12,Lê Thị Anh Thư,1,1911000000,beingFollowedUp,internal,622100302
+0cd089e9-a026-4c9b-a959-db7c96ad0c81,1.61E+12,Phạm Hoàng Hoa,1,0,beingFollowedUp,internal,160500558
+0cd9efca-ce6e-4fba-b78f-675c0f78652e,1.61E+12,Cty TNHH Nông Sản Tân Hoàng Kim,1,0,beingFollowedUp,internal,160500558
+0d48cece-08f6-4681-87e0-911112b19db4,6.42E+12,Nguyễn Văn Đực,3,7934800,beingFollowedUp,external,642100567
+0d4a69df-ffac-4c74-a9f0-9e54b48f690e,6.42E+12,Phạm Thị Bích Tiên,1,1005000000,beingFollowedUp,internal,642100553
+0dc9cd45-86ee-4059-b112-53eec3129aee,1.61E+12,Nguyễn Thị Tú Anh,1,10000000,beingFollowedUp,internal,160500556
+0e805a75-9024-4d25-9604-7f12586d4640,1.61E+12,Phan Huy Giáp,1,1681512000,beingFollowedUp,internal,160500556
+0ebaf9b0-68aa-4153-88bc-e97745d4fe18,6.42E+12,Cty TNHH TM DV DTG,1,0,beingFollowedUp,internal,642100529
+0ef014e8-6023-4b6d-a13a-c2a6c1505eae,6.22E+12,Ngô Thị Bích Phượng,1,1433600000,beingFollowedUp,internal,622100302
+0f247803-0df5-4ed1-951f-2537c82cd27b,6.42E+12,Nguyễn Văn Chượt,5,9520000,beingFollowedUp,external,642100567
+0fc3f7a2-9454-4e04-8365-97fb82918938,6.42E+12,Lê Hoàng Sơn,1,5185000000,beingFollowedUp,internal,642100545
+115eebee-a786-427f-9106-b5750ee80483,6.22E+12,Vũ Tiến Dũng,1,600000000,beingFollowedUp,internal,622100282
+118b00f2-b886-4b4a-ac91-f798484aebeb,1.61E+12,Cty TNHH SX DV TM GB FUR,5,9574500000,beingFollowedUp,external,160500558
+11ab75a6-843e-42ed-934e-fe89f7c554b8,6.22E+12,Nguyễn Thị Tân,1,3400000000,beingFollowedUp,internal,622100302
+11dd85b3-8504-4eea-8c05-090a0e4e38a4,6.42E+12,Cty TNHH MTV Hà Tĩnh,1,0,beingFollowedUp,internal,642100529
+12b399ad-7415-4fa8-ae38-96c1433c3bc6,1.61E+12,HTX VT Ô Tô Sao Việt,1,962739000,beingFollowedUp,internal,160500558
+12bac926-2e3d-40e5-a51c-eac8d1aed101,6.22E+12,Huỳnh Thị Thanh Xuân,1,234000000,beingFollowedUp,internal,622100301
+1348a622-6c50-46c8-8485-e7e3fe0775b9,6.22E+12,Nguyễn Kim Ngọc,1,1238049000,beingFollowedUp,internal,622100282
+13c00e20-f498-4cbe-8bc0-c42da34b396f,1.61E+12,DNTN TM Đức Đạo,1,0,beingFollowedUp,internal,160500558
+147c208a-9ebd-4b77-9575-84ad5b21a161,6.22E+12,Nguyễn Đức Thuấn,1,528000000,beingFollowedUp,internal,622100301
+1638fd4e-b498-4529-bf78-1908b3fdfd27,1.61E+12,Cty TNHH SX DV TM GB FUR,1,0,beingFollowedUp,internal,160500558
+1675d230-eb85-4a07-9b03-839cc35885a3,6.22E+12,Trần Nguyên Khang,5,14920000000,beingFollowedUp,external,622100282
+17b0e56a-03eb-45a2-812e-1eced47ca98c,1.61E+12,Cty TNHH XNK Nông Sản Khamico,1,0,beingFollowedUp,internal,160500558
+188ca800-58ab-4bed-bf27-343d2310a838,6.42E+12,Phạm Quốc Trinh,4,18120000,beingFollowedUp,external,642100567
+18b2cf99-d103-49f6-ad26-e811a93f3dc9,1.61E+12,Công ty TNHH Sài Gòn Mỹ Vinh,1,0,beingFollowedUp,internal,160500558
+18e0a48a-a91e-452e-b50b-12312d4ec7f5,6.22E+12,Trần Đức Kiệt,1,0,beingFollowedUp,internal,622100300
+1956b8fd-cfbf-4987-939e-191a76757e73,6.22E+12,Trần Thị Thanh Trúc,4,14800800000,beingFollowedUp,external,622100302
+19b5f0d4-b1ba-433a-87a5-79296373eef1,6.42E+12,Cty TNHH TM Thiên Quân,1,0,beingFollowedUp,internal,642100556
+19cba52e-9bf3-4b8b-9001-6b62b7f8fae8,6.22E+12,Cty TNHH SX TM Thiện Hà,5,25019082066,beingFollowedUp,external,622100282
+19d51dbb-6052-40b4-8503-7a1414df60f5,1.61E+12,Dương Mỹ Châu,1,0,beingFollowedUp,internal,160500558
+19f0813c-ba83-473e-a17c-746fc0872540,6.42E+12,Công Ty Cổ Phần Quốc Tế Justwin,5,79930000000,beingFollowedUp,external,642100556
+19f0bf80-9611-469d-923a-1284877b48d3,6.42E+12,Trần Hải Nam,1,1912000000,beingFollowedUp,internal,642100545
+1aeead41-e6ee-4b91-9046-baa436acbdd7,6.42E+12,Lê Quang Trung,1,0,beingFollowedUp,internal,642100564
+1bd3e242-76c2-4dac-8960-517fa500ce31,6.42E+12,Cty TNHH ĐT SX TM DV Việt Hưng,1,0,beingFollowedUp,internal,642100517
+1cb7f550-88a3-45f2-92de-cb422bd2d900,6.22E+12,Nguyễn Thanh Bình,1,1200000000,beingFollowedUp,internal,622100300
+1ce9d876-7db0-4788-b64a-ab5ff92fda86,6.42E+12,Hồng Thu Tùng,1,0,beingFollowedUp,internal,642100564
+1dd7d3fd-e80d-4e03-8bad-3019551c9940,1.61E+12,Cty TNHH Nông Sản Hoàng Khang,1,0,beingFollowedUp,internal,160500558
+1e7a9f05-04ec-4b22-93d8-4bb375a94974,6.42E+12,Nguyễn Trọng Luân,3,32045521,beingFollowedUp,external,642100567
+1e7b4cd4-1693-42ec-9cd1-76fdc4da7af5,6.42E+12,Huỳnh Khánh Hoàng Hầu,3,9125000,beingFollowedUp,external,642100567
+1ed0e990-1a57-4ade-af65-1118873c7896,1.61E+12,Phan Thị Kiều Vân,1,5805000000,beingFollowedUp,internal,160500556
+1f2bd18c-448e-490d-bdf7-7c82cb05ed6c,6.22E+12,Huỳnh Tấn Trung,1,581600000,beingFollowedUp,internal,622100302
+1f69fbde-b402-47e5-b2e9-bd99197e27f7,1.61E+12,DNTN BAO TIN,1,0,beingFollowedUp,internal,160500558
+1f6ee958-9ddf-4e4c-a3bd-1ca8499dd0f7,6.42E+12,Cty TNHH TM Thiên Quân,3,63986000000,beingFollowedUp,external,642100556
+1ff78fcb-e91e-4a6e-b580-e07d5e7174a2,6.42E+12,Quách Tố Như,1,34000000,beingFollowedUp,internal,642100545
+204f52d3-c0af-48ba-a680-8d3cdff20c56,1.61E+12,Cty TNHH XNK Nông Sản Việt Phát,5,30000000000,beingFollowedUp,external,160500558
+209f8edd-52ac-4db2-8b5c-83b01b9d161a,6.22E+12,Phan Thanh Tuyền,1,722000000,beingFollowedUp,internal,622100282
+21c79ad0-fda9-4824-8a7e-73aa1bae7779,6.22E+12,Nguyễn Quốc Cường,1,5630000000,beingFollowedUp,internal,622100282
+22d42f91-017b-43a7-88a8-f7567ec3e8d6,1.61E+12,Nguyễn Trung Hậu,1,0,beingFollowedUp,internal,160500556
+22ec713b-4ce4-44af-9ff0-869c745e3d3f,1.61E+12,Trần Anh Tuấn,1,1261000000,beingFollowedUp,internal,160500556
+2348c48b-5c8b-49ee-8fc6-b9276b22dad8,6.22E+12,Nguyễn Tuấn Lan,1,5834000000,beingFollowedUp,internal,622100300
+237ef9b0-881b-42a1-b89e-5eed7c0b5825,6.22E+12,Dương Thị Bích Vân,1,757000000,beingFollowedUp,internal,622100301
+24d8930a-6974-4962-8071-0fed6c713f16,6.42E+12,Hồng Thu Tùng,5,872000000,beingFollowedUp,external,642100564
+24fd34e9-6d05-4d4c-9097-657d3ba05648,1.61E+12,Cty TNHH Nông Sản VINA ,1,0,beingFollowedUp,internal,160500558
+25bbf1ca-ef5f-4568-96e5-2fec39219b6a,1.61E+12,Cty TNHH TM DV XNK Phước Hậu,5,29990000000,beingFollowedUp,external,160500558
+2659f9c7-c79d-4a32-8126-9a7caf8f900e,6.42E+12,Cty CP UNICORN FOOD,1,0,beingFollowedUp,internal,642100261
+26a2b66c-a587-42bf-b8d1-f997eafe1bac,1.61E+12,Cty TNHH Nhà Hàng Đặc Sản 39,3,11199984000,beingFollowedUp,external,160500558
+2715ca8b-c935-44a9-adad-d916dfe22d83,1.61E+12,Cty TNHH TV ĐT TM DV Minh Phú,3,1857255809,beingFollowedUp,external,160500558
+275bb1c6-3dc7-403a-9da7-f32c729d0a02,1.61E+12,Lê Ngọc Thảo Nguyên,1,235000000,beingFollowedUp,internal,160500556
+282f2519-77eb-4d2f-b3e6-4cf50d94fa3e,6.42E+12,Đặng Thị Anh Đào,1,267000000,beingFollowedUp,internal,642100545
+290fe7f4-065f-47fe-b091-1adb41bfd473,1.61E+12,Cty TNHH Nông Sản Tân Hoàng Kim,4,20000000000,beingFollowedUp,external,160500558
+293449a8-f7c6-4b0b-b74c-f18226619954,6.42E+12,Cty CP TM DV XD Pháp Mỹ,1,0,beingFollowedUp,internal,642100556
+295a1739-3f90-4314-a785-e496bbde8676,6.22E+12,Lý Thanh Vũ,3,60948403,beingFollowedUp,external,622100302
+299f6748-a21c-4b19-aeca-fef97702f89c,6.42E+12,CTY TNHH TM XNK STOPCOFFEEGO,1,0,beingFollowedUp,internal,642100261
+29dff27e-5898-4fbf-acd4-76628451eb88,6.22E+12,Trương Minh Hoàng,5,590020526,beingFollowedUp,external,622100302
+2a756d17-c03d-4424-8b51-8d826dfb5348,6.22E+12,Vũ Thiện Thuật,1,243000000,beingFollowedUp,internal,622100301
+2ab7418a-21fa-4923-a853-e58b2d08d0a0,6.22E+12,Võ Thanh Tòng,1,0,beingFollowedUp,internal,622100282
+2ac95134-4ddf-4c4e-abad-fd703559503e,1.61E+12,Trần Anh Tuấn,1,0,beingFollowedUp,internal,160500558
+2c0bbf3a-5cfe-4ede-930b-fe908a4d66d5,6.42E+12,Mai Thị Kim Oanh,4,5772300000,beingFollowedUp,external,642100261
+2c14f0f8-1f68-437a-993f-a347647b00ed,6.22E+12,Đỗ Văn Thuyết,1,467540000,beingFollowedUp,internal,622100282
+2d90e8df-dc7b-466f-b51a-8643d5c0ceee,6.22E+12,Nguyễn Châu Phi,1,270000000,beingFollowedUp,internal,622100302
+2d9df251-fb25-4d40-8982-602ec384ccf0,6.42E+12,Lê Nguyễn Phương Trà,1,0,beingFollowedUp,internal,642100564
+30b2bd0d-1309-4225-b146-3b6ca227eee0,6.22E+12,Nguyễn Văn Bình,1,0,beingFollowedUp,internal,622100282
+30fb64a5-b264-425c-9cb2-fc7b755bee66,1.61E+12,Phạm Công Thương,1,607120000,beingFollowedUp,internal,160500556
+313a285f-3585-4d23-89c4-d3494d52cded,6.42E+12,Phạm Ngọc Thẩn,2,2814100000,beingFollowedUp,internal,642100553
+3166684b-2276-4c6b-b4fc-59b6fd759590,6.22E+12,Trần Thị Thêu,1,8554000000,beingFollowedUp,internal,622100300
+31e87576-b4d4-40fc-8794-83671bbf94b9,6.42E+12,Phan Huy Giáp,1,20000000,beingFollowedUp,internal,642100553
+3204472e-f15f-41a7-8374-8fabca59ed34,6.42E+12,Cty TNHH TM TTRICE,3,99950000000,beingFollowedUp,external,642100556
+322e5d3a-c1e0-4973-8d51-711fb6106104,6.22E+12,Nguyễn Thành Luân,4,2000000000,beingFollowedUp,external,622100300
+32398053-0b9c-4260-b64b-755797c29025,6.22E+12,Nguyễn Đức Huynh,1,0,beingFollowedUp,internal,622100300
+338b03c8-c1ca-42ae-8a19-06bef98badd2,6.22E+12,Nguyễn Minh Quang,1,0,beingFollowedUp,internal,622100302
+33ce4a24-2905-464a-8c53-36a9af71fc8c,1.61E+12,Nguyễn Thị Như Liên,1,19420000,beingFollowedUp,internal,160500556
+3484f611-3978-4e76-89fb-ec915471e6d9,6.42E+12,Cty TNHH Hoa Ngọc Thủy,5,1000000,beingFollowedUp,external,642100529
+35ae5b7e-5843-41e0-b568-fd1d51a37f83,6.22E+12,Hồ Thị Huỳnh Như,1,1970000000,beingFollowedUp,internal,622100282
+365942ce-9b88-4f06-a25c-3cfd93725f85,6.22E+12,Cty CP SX TM Vĩ Nam Việt,1,44333078800,beingFollowedUp,internal,622100302
+36641e9a-b662-4c67-853a-f38656e47bca,1.61E+12,Dương Mỹ Châu,4,132025498,beingFollowedUp,external,160500558
+3683a086-71ff-4743-bffc-32a68f43f8bf,6.42E+12,Phan Thị Mỹ Phương,4,2000000000,beingFollowedUp,external,642100564
+36c334e2-986d-4b76-9919-244d0c8d2292,6.42E+12,Bùi Minh ái Nghĩa,1,0,beingFollowedUp,internal,642100564
+370ca4fa-8922-479b-8707-ad3cb86ac4d9,6.22E+12,Lê Trần Thiện Nhân,1,2890000000,beingFollowedUp,internal,622100302
+3751c9db-23ed-45ec-960b-8bfad71f4a2c,6.22E+12,Phạm Thị Thu,1,1010000000,beingFollowedUp,internal,622100300
+37824e9d-62c3-4122-999a-63e023d5894b,6.22E+12,Cty TNHH TM DV XNK Duy Long,5,0,beingFollowedUp,internal,622100282
+3796ac6a-11f1-41d4-843c-5569b7baeb09,6.22E+12,Bùi Đặng Tú Khang,1,270000000,beingFollowedUp,internal,622100301
+381dd59f-80c3-463b-80cd-c9ec430b910b,1.61E+12,Cty TNHH Miền Đất Thép,3,25000000000,beingFollowedUp,external,160500558
+38416eeb-7395-4bcd-8917-c30571e65fad,6.22E+12,Trần Ngọc Bích Tuyền,1,1420000000,beingFollowedUp,internal,622100282
+3858f4ad-e106-4203-9a02-deca50172dda,6.42E+12,Nguyễn Anh Pha,1,22000000,beingFollowedUp,internal,642100545
+38971508-d409-4788-a9bb-af4d7a2e6915,6.22E+12,Đinh Thiên Tiên,1,1700000000,beingFollowedUp,internal,622100302
+392cc08d-f48a-47aa-999c-2eb852c4853e,1.61E+12,Cty TNHH TM DV XNK Phước Hậu,1,0,beingFollowedUp,internal,160500558
+39a1edb5-d232-4f65-8c8a-5422e2bd1fd5,6.22E+12,Trần Thị Xuân,1,90000000,beingFollowedUp,internal,622100301
+3b59a616-40b6-4fdf-8a5f-6bcc7f83f786,1.61E+12,Nguyễn Hoài Sang,3,40277000,beingFollowedUp,external,160500558
+3c732011-7413-4f12-be34-1798ed97cfc2,6.42E+12,Võ Thanh Phương,4,4708000,beingFollowedUp,external,642100567
+3c82748c-a36c-41c2-9021-c8b6a73b3034,6.42E+12,Cty CP UNICORN FOOD,4,27346430857,beingFollowedUp,external,642100261
+3cb0b1a7-4585-49fa-8b79-07dbfab64071,1.61E+12,Đỗ Ngọc Dũng,4,620768965,beingFollowedUp,external,160500558
+3cc8293a-06b6-4947-afa7-efa36744f9f0,6.22E+12,Bùi Thọ Hoành,1,2690000000,beingFollowedUp,internal,622100282
+3cea2581-020b-4ecc-a235-e8bed4d12492,6.42E+12,Nguyễn Thị Thanh Hương,5,972500000,beingFollowedUp,external,642100564
+3d5a31d5-0fe2-4359-9ea7-ad54523aab46,6.42E+12,Nguyễn Thu Hà,1,64000000,beingFollowedUp,internal,642100545
+3d887dd8-29f3-4e0f-ad92-4d5eb56a9e16,6.22E+12,Đặng Vũ Quang,5,2717240000,beingFollowedUp,internal,622100282
+3db27933-ad39-4975-877e-ebc3850c9a0b,6.22E+12,Nguyễn Văn Hân,1,746000000,beingFollowedUp,internal,622100282
+3e3c0d08-dd21-4d82-a4b2-ac112601477c,1.61E+12,Phùng Hữu Luận,1,750005000,beingFollowedUp,internal,160500556
+3e6d10f8-2f29-4d1d-b49d-a2b9193dbf76,6.22E+12,Nguyễn Thị Tuyết Vân,1,1551800000,beingFollowedUp,internal,622100282
+3e8a55d1-969a-4570-ace5-fde84f944223,6.42E+12,Cty TNHH Song Bích,1,0,beingFollowedUp,internal,642100556
+3f8663e8-b618-4f0b-8289-69d77f0ccd05,1.61E+12,Cty CP SX Gạch Việt Mỹ,3,13750000000,beingFollowedUp,external,160500558
+3fc25c87-1a65-42d5-8e97-7282f08fe0a2,6.22E+12,Đinh Công Chung,5,83000000,beingFollowedUp,external,622100282
+40f144e9-94a4-4a61-9c7f-c648863dcb2a,6.22E+12,Võ Thị ái Trúc,1,234000000,beingFollowedUp,internal,622100302
+4117cfd9-735c-4c26-a61d-58b1d7ad2360,6.22E+12,Cty TNHH TM DV Thép Hoàng Thành,5,18500000000,beingFollowedUp,external,622100300
+4179fd21-0ad3-4adf-9c25-8c3a86831a05,6.42E+12,Văn Như Bình,3,26640000,beingFollowedUp,external,642100567
+42f42567-60a0-4ce0-9cc2-b785f8ed4f02,1.61E+12,Lê Huỳnh Thanh Hoa,1,27210000,beingFollowedUp,internal,160500558
+4448b315-c610-4769-b3ed-ac7b79421d8f,6.22E+12,Võ Hoàng Phúc,2,299000000,beingFollowedUp,internal,622100300
+451bd03c-6dc6-44cb-aa7c-6d7ed8f68208,1.61E+12,Nông Thị Trang,1,66672000,beingFollowedUp,internal,160500556
+4552b823-71af-4897-8305-d15564e6e25d,1.61E+12,Ngô Trần Phượng Vy,1,19420000,beingFollowedUp,internal,160500556
+4598e77e-dec0-4680-975d-d3b50827ef63,1.61E+12,DNTN TM Đức Đạo,5,2272200000,beingFollowedUp,external,160500558
+45d3b1f4-35c6-4a5c-88a5-1d5111691671,6.42E+12,Nguyễn Thị Thu Hà,5,32060000,beingFollowedUp,external,642100567
+470bbd4a-00b9-4cbf-9a44-4c0c8240544f,6.42E+12,Cty TNHH TM TTRICE,1,0,beingFollowedUp,internal,642100556
+471a3b6b-5abe-48bd-842d-7443d6daffd5,1.61E+12,Cty TNHH Nông Sản Đăng Khoa,4,20000000000,beingFollowedUp,external,160500558
+481bfa78-0f0b-435d-b1ee-2b5d7b5a3f53,6.42E+12,Cty TNHH TM DV XD Huỳnh Gia,3,8000000000,beingFollowedUp,external,642100564
+483c52fa-8216-43ca-bdc0-52defa07a893,6.42E+12,Lê Quang Trung,4,1040137735,beingFollowedUp,external,642100564
+489c0ffb-e16b-4c53-9655-06227ed5673b,1.61E+12,Cty TNHH Sài Gòn Shipbuilding,4,12400000000,beingFollowedUp,external,160500558
+48cadcda-6864-43ad-ad0b-d51d0365f4f8,6.22E+12,Phạm Nguyễn Việt Nga,1,4454000000,beingFollowedUp,internal,622100301
+490f5c55-2805-4cff-a6c3-95ed462f3c15,6.42E+12,Cty TNHH Song Bích,4,11749790000,beingFollowedUp,external,642100556
+499cceb6-82b5-4fca-942d-3daf13786213,6.42E+12,Dương Thị Kim Liên,4,14960000,beingFollowedUp,external,642100567
+49aca232-b355-48f2-9126-ff81167e6710,6.42E+12,Nguyễn Thị Tường An,1,40000000,beingFollowedUp,internal,642100545
+4a09c0f8-9b02-4876-ad30-81ce5b0b9d1a,6.22E+12,Cty CP TM DV SBTC,5,0,beingFollowedUp,internal,622100282
+4b16b7b4-81b1-43b2-9bc3-adebd47b9287,6.22E+12,Hồ Thị Gái,3,16594844,beingFollowedUp,external,622100282
+4b655414-6c34-4643-ba81-886cf3e262b6,6.42E+12,Nguyễn Văn Trường,4,3649000,beingFollowedUp,external,642100567
+4cd7f679-8748-4bc0-8146-ca422bfaa144,6.22E+12,Vũ Văn An,1,45000000,beingFollowedUp,internal,622100300
+4ce38b92-d579-45b5-b17c-587836844168,6.42E+12,Nguyễn Thị Hoàng Oanh,5,202000,beingFollowedUp,external,642100567
+4e08ae05-dde8-4440-974c-87f2bf471eb4,6.42E+12,Cty TNHH Sago Home Nhà Sài Gòn,1,0,beingFollowedUp,internal,642100556
+4e510322-2a58-4c85-b2e1-8a27b4e876e3,1.61E+12,Trần Văn Nhàn,1,0,beingFollowedUp,internal,160500558
+4e6a4c2a-ff7d-4acc-af4b-890e16e0d8f2,6.22E+12,Tuấn Anh Huy,1,6120000000,beingFollowedUp,internal,622100300
+4efbd5f8-d27f-4496-9f96-8914b4defe3d,6.42E+12,Nguyễn Thị Tuyết Nhung,5,25800000,beingFollowedUp,external,642100567
+4f5d4fd1-ace9-4cff-bb02-d7da1a8edc9c,6.42E+12,Cty TNHH Vương Diễm 97,4,1.20E+11,beingFollowedUp,external,642100529
+4f9bda15-190e-4e4f-862b-8767a7dbb2e3,1.61E+12,Cty CP Tập Đoàn Bình Phát,5,575000,beingFollowedUp,internal,160500558
+4fec2d1b-888d-47c9-8a51-513b2e935896,6.42E+12,Lê Công Bách,1,4914400000,beingFollowedUp,internal,642100545
+50f81e6a-9d0c-4f09-8234-e1f185c6b2cc,6.22E+12,Võ Thanh Toàn,1,0,beingFollowedUp,internal,622100302
+50ff9d3d-f232-4c52-93ed-a627ba714e83,1.61E+12,Cty TNHH Sài Gòn Shipbuilding,1,0,beingFollowedUp,internal,160500558
+5167ab40-c47a-43c6-8fd3-4747911e96bd,6.22E+12,Hồ Thị Gái,1,0,beingFollowedUp,internal,622100282
+51691e03-6894-4e23-82b6-0f62ed8e9b57,6.22E+12,Nguyễn Thị Ngọc Dung,1,290000000,beingFollowedUp,internal,622100302
+521ae6bd-b477-4f63-8f5a-47ff4e09a1ed,1.61E+12,Phan Thị ái Liên,1,160000000,beingFollowedUp,internal,160500556
+5292cf86-8d54-41ae-abaa-377bfb14743b,6.22E+12,Trần Phước Sang,1,270000000,beingFollowedUp,internal,622100301
+52d0693a-eeab-4500-882b-f6a12a58cf1c,6.42E+12,Võ Hùng Sơn,4,26653709,beingFollowedUp,external,642100567
+532f8127-d65e-450f-8044-28bef9be73ab,1.61E+12,Cty TNHH Thực Phẩm Vinh Quang,1,0,beingFollowedUp,internal,160500558
+537746ee-e756-4b73-bd50-e80f4fefa157,1.61E+12,Đỗ Ngọc Dũng,5,237377500,beingFollowedUp,internal,160500558
+54a2033f-0c09-4bf9-9597-d963c03e666a,6.22E+12,Trần Thị Thanh Trúc,1,0,beingFollowedUp,internal,622100302
+54ae913a-4e95-44a9-a96f-2fd9283a6d0f,6.22E+12,Nguyễn Thị Thu Hường,1,1900000000,beingFollowedUp,internal,622100282
+54aec53d-00b6-44ff-981d-3ce45e85e349,6.42E+12,Nguyễn Kim Tuấn,1,34000000,beingFollowedUp,internal,642100545
+54f8dad8-5a73-4559-8f0d-d9f34be2487e,6.42E+12,Đỗ Quốc Duy,1,1076000000,beingFollowedUp,internal,642100545
+5524f60d-4f44-49eb-85fc-cb8ad40ed2cc,6.22E+12,Vũ Thị Minh Huệ,1,3407000000,beingFollowedUp,internal,622100301
+55757db0-31db-40cc-9777-95fff5b14ad7,1.61E+12,Vũ Hoàng Khiêm,1,140000000,beingFollowedUp,internal,160500556
+5603ee41-7445-42df-b854-4e411d3fab57,1.61E+12,Cty TNHH TM Bách An Vạn Phước,4,13970000000,beingFollowedUp,external,160500558
+56920471-0a78-4df2-ad12-91631e2a3c90,6.42E+12,Nguyễn Đức Hùng,5,1000000000,beingFollowedUp,external,642100564
+57ad93e2-858b-42ad-ab7e-ef05da155b5a,6.22E+12,Nguyễn Minh Khôi,1,2010000000,beingFollowedUp,internal,622100282
+5800fde4-d1b0-4d93-b5ba-488c15af75ac,6.22E+12,Phạm Văn Phúc,1,428000000,beingFollowedUp,internal,622100302
+58b3b904-ae79-43c5-a75f-b2efb4ce7bee,6.42E+12,Lê Thị Bích Nguyên ,1,20000000,beingFollowedUp,internal,642100553
+58f19071-0e75-444d-a15a-29549ef7d506,6.22E+12,Nguyễn Thị Hoa Mai,1,141000000,beingFollowedUp,internal,622100302
+59ecd1c3-db50-4fdc-bf5d-258cd6711e41,6.22E+12,Đặng Vũ Quang,4,2032760000,beingFollowedUp,external,622100282
+59f035b5-ab16-4bbe-8507-1e5c9db11a42,1.61E+12,Hồ Phúc Duy,4,5477666668,beingFollowedUp,internal,160500556
+5ab6a501-c2c9-406f-991a-ac6a8d8be38a,6.42E+12,Nguyễn Hoàng Huyên,1,0,beingFollowedUp,internal,642100564
+5b0eb987-74ce-417c-8872-dc3ba6749f79,1.61E+12,Cty TNHH TM DV XNK Ngọc Khang,1,0,beingFollowedUp,internal,160500558
+5b29c321-6f94-48de-a319-d4efacda766f,6.42E+12,Phạm Thiên Triệu,1,39000000,beingFollowedUp,internal,642100545
+5cbab5fb-e938-493f-b152-9b5486602b2b,6.42E+12,Lê Thị Tuyết Mai,1,0,beingFollowedUp,internal,642100564
+5d434da9-517c-4769-9d40-64c550b16b29,1.61E+12,Nguyễn Thị Thu Hương,1,20000000,beingFollowedUp,internal,160500558
+5d99bda5-a8b6-4339-98db-21de9f12a6fc,6.42E+12,Ngô Thị Thu Vân,3,7230000000,beingFollowedUp,external,642100261
+5fa25d8f-be3b-441a-ac37-07b98573c928,6.22E+12,Liêu Vũ Minh,5,0,beingFollowedUp,internal,622100282
+6091bbf2-12a6-421b-b74c-721da0fedc2a,6.22E+12,Lê Đức Vũ,1,4360000000,beingFollowedUp,internal,622100282
+609525e3-5a75-45a6-8223-151c6c77d4a1,6.42E+12,Nguyễn Đức Hùng,1,0,beingFollowedUp,internal,642100564
+6144d037-7205-45b3-85c3-ea89832d3827,6.42E+12,Cty TNHH TMDV TV Và ĐT Thiên Phúc Sài Gòn,3,69083713067,beingFollowedUp,external,642100261
+61f09fc0-f126-4fa7-96b3-8bd132eee691,1.61E+12,Công ty CP ĐT XD và KD BĐS Tân Phong,1,0,beingFollowedUp,internal,160500558
+62adadfb-de13-4373-9fa0-eb41a2cd48a1,6.22E+12,Lê Thị Thu Hương,1,720000000,beingFollowedUp,internal,622100302
+62d79218-1053-4e3a-ac76-56ed7767a4cb,6.42E+12,Trương Thái Hoàng Huy,5,255000000,beingFollowedUp,internal,642100553
+62e96812-4a40-44e9-b1e6-dc78a5cd1af1,6.42E+12,Cty TNHH TM DV Quỳnh Anh Khang,1,0,beingFollowedUp,internal,642100564
+64e0d80a-7978-4100-bb21-b60cc02fff50,6.22E+12,Cty TNHH Đá Tấm Xây Dựng Cao Cấp,5,1.96E+11,beingFollowedUp,external,622100282
+65e2eb20-4d09-4624-b695-3ab5eacbb1c7,6.42E+12,Cty TNHH Việt ASD,3,77019000000,beingFollowedUp,external,642100556
+664aa3e4-60dc-4c39-83a6-8b38b78eead3,1.61E+12,Nguyễn Thị Phương Thanh,1,19420000,beingFollowedUp,internal,160500556
+669e5684-2646-48b5-8bca-914df96b2f19,1.61E+12,Cty TNHH XD TM&KD Nhà Nam Việt,5,0,beingFollowedUp,internal,160500558
+6702cbe0-60c5-4f66-99df-608c7f730510,6.42E+12,Cty TNHH MTV TM SX DV Đại Tài,5,13451173086,beingFollowedUp,external,642100261
+6746b5db-ada0-461e-83d3-73d6cd53b7fb,6.42E+12,Cty TNHH TM DV Đức Nhân,5,883855983,beingFollowedUp,external,642100261
+67abe9d2-f82e-4ecd-9063-97045ccd3bb7,1.61E+12,Cty TNHH TM Bách An Vạn Phước,1,0,beingFollowedUp,internal,160500558
+6849e12c-2a34-47d7-9e9a-9a82291245c6,1.61E+12,Cty TNHH KD DV Thuận Thuận Phát,5,30000000000,beingFollowedUp,external,160500558
+68d9d7e8-6e5c-42af-8ff0-002537265e71,6.42E+12,Võ Yến Như,1,34000000,beingFollowedUp,internal,642100545
+6921cbdc-c7c5-442c-a06b-2a9b0a5cf0c5,6.42E+12,Cty TNHH Nông Nghiệp COMPOST,1,0,beingFollowedUp,internal,642100529
+6934e0b4-8d24-4da6-a264-e3406b274a75,6.42E+12,Lê Nguyễn Phương Trà,3,3666660000,beingFollowedUp,external,642100564
+695c9c6c-812c-46f7-a19a-8fcf3bf94e6d,1.61E+12,Cty TNHH MTV XNK Nông Sản Thảo Nguyên Xanh,4,25612780000,beingFollowedUp,external,160500558
+6a92247d-4d15-4ec8-b906-55da5a965bbd,6.42E+12,Thái Văn Cương,4,1400000,beingFollowedUp,external,642100567
+6c4d5bd3-81e2-4eec-bde9-449c555b445b,6.42E+12,Cty TNHH  Đại Võ,3,56875000,beingFollowedUp,external,642100564
+6c557240-8e82-49e7-b52f-05e2c21ecb63,1.61E+12,Dương Thống Nhất,1,0,beingFollowedUp,internal,160500558
+6c6773d6-816f-427b-9848-43102330ed5c,6.22E+12,Vũ Thanh Nghị,1,70000000,beingFollowedUp,internal,622100302
+6c7e03b9-f80b-4779-b327-f006c9966c7a,6.22E+12,Nguyễn Thành Luân,1,0,beingFollowedUp,internal,622100300
+6c994963-6a3a-4eb4-a6df-ef49e6376f20,6.22E+12,Nguyễn Minh Quang,4,15000000000,beingFollowedUp,external,622100302
+6cb7cd99-1978-4f94-a079-768c5bbd9ae2,6.22E+12,Trần Hữu Tuấn,1,75000000,beingFollowedUp,internal,622100302
+6cc3f846-7d95-44f9-bb5b-ebb527527b44,1.61E+12,Cty TNHH SX TM Và DV XD Gia Phan,1,0,beingFollowedUp,internal,160500558
+6db3784d-4b04-4386-b412-a53b4388c31a,6.22E+12,Phan Cảnh Thế Mỹ,3,14860000000,beingFollowedUp,external,622100282
+6ddee0aa-39ca-4422-a68b-c5034d0a44f0,6.22E+12,Doanh Nghiệp TN TM - DV Hưng Phát,5,0,beingFollowedUp,internal,622100302
+6de3eb4a-ffd9-445a-9746-b493055f3b9f,6.22E+12,Vũ Thị Lan Hương,1,234000000,beingFollowedUp,internal,622100301
+6df1189a-7537-419e-91c4-d9ad58db9110,6.42E+12,Trương Vĩnh Phúc,4,2993659000,beingFollowedUp,external,642100261
+6e99c56b-3199-4ff3-b50a-4bd2ce948a14,6.22E+12,Trần Nguyên Khang,1,0,beingFollowedUp,internal,622100282
+6f32d890-09fc-47a2-bb1c-823d552e027a,1.61E+12,Lê Công Bách,1,20000000,beingFollowedUp,internal,160500556
+6f93e0fe-a2de-46fc-b34a-067a1f5d3a3f,6.42E+12,Phan Tuấn Hợi,1,805000000,beingFollowedUp,internal,642100545
+6faf254d-b0dc-420f-aa82-ab85a2f5b6d9,6.42E+12,Lê Thị Nhung,1,0,beingFollowedUp,internal,642100567
+70004fad-b679-491d-91a5-e69d6a7af1c4,6.42E+12,Cty TNHH TM DV Lyn,4,25170000000,beingFollowedUp,external,642100564
+703936e3-ff7f-4598-b35b-5d9d47737a29,6.22E+12,Nguyễn Thị Minh Hải,1,30000000,beingFollowedUp,internal,622100302
+715a572e-625e-43e7-86b8-c58a7d15b27a,6.42E+12,Cty CP Trương Thiên Hà,4,1.50E+11,beingFollowedUp,external,642100529
+725fc16e-f395-4be3-abfa-72249d200846,6.42E+12,Trần Thoại Tài,1,1000000000,beingFollowedUp,internal,642100553
+7286c992-edc7-4ee7-8e2a-ecdd366840a6,6.22E+12,Phạm Huy Tín,5,540000000,beingFollowedUp,internal,622100300
+72cbf062-e206-4f93-88d6-83f72d90ef16,6.22E+12,Huỳnh Ngọc Thủy Tiên,2,3145000000,beingFollowedUp,internal,622100300
+73c952a9-3181-45df-92a6-7b10b8522ec9,1.61E+12,Cty TNHH Nông Sản Trí Hưng,3,7500000000,beingFollowedUp,external,160500558
+73f2b261-d586-4274-93ca-fd8ede2413d6,6.42E+12,Nguyễn Văn Trí,3,29012245,beingFollowedUp,external,642100567
+73f7cf79-389e-421a-87d6-eb3850bc3955,6.22E+12,Hoàng Tiểu Phụng,1,1992000000,beingFollowedUp,internal,622100300
+747c7515-999e-4a40-bb88-0530d79ffb7a,6.22E+12,Trần Đức Kiệt,4,7450000000,beingFollowedUp,external,622100300
+74f1d930-7266-4686-9f0e-f0286c848d65,1.61E+12,Cty TNHH TV SG Khang Minh,1,0,beingFollowedUp,internal,160500558
+753c708d-ac47-4b64-9b4a-fe25bbe0d83e,1.61E+12,Nguyễn Trung Hậu,4,55544000,beingFollowedUp,external,160500556
+758e19e4-511a-468c-b37c-61df37f13933,6.22E+12,Nguyễn Anh Tuấn,1,400000000,beingFollowedUp,internal,622100300
+768a2d4a-6532-4be1-9e53-112cf0061001,6.22E+12,Đinh Công Tân,1,8000000,beingFollowedUp,internal,622100301
+773d5bd4-3709-45c9-9e02-57403f6f36c0,6.42E+12,Huỳnh Hữu Hạnh,5,10600000,beingFollowedUp,external,642100567
+77d94f2c-ee15-46e3-8fe9-97c0a733934b,6.22E+12,Đinh Văn Định,1,1260000000,beingFollowedUp,internal,622100282
+791b97cc-4581-4de6-85a1-f168345de40a,6.42E+12,Trần Thị Kim Liên,1,800000000,beingFollowedUp,internal,642100545
+7a14fbd5-5dd7-4205-a2e9-064aad4b8b46,6.42E+12,Cty CP TM KT Và ĐT Sài Gòn,1,0,beingFollowedUp,internal,642100556
+7a8f4a36-21dc-44d1-a212-7d139d0d5dcc,1.61E+12,Nguyễn Thu Hà,1,750500000,beingFollowedUp,internal,160500556
+7b730d13-37d2-4285-86b0-800099adeac7,6.42E+12,Đào Thị Thu Hiển,4,14560000,beingFollowedUp,external,642100567
+7b96fec6-3043-41bc-a9ca-d836134fbb4a,6.22E+12,Huỳnh Thị Tường Vy,1,1550000000,beingFollowedUp,internal,622100300
+7bb0f099-bf40-4eac-93be-c6819682e23d,1.61E+12, Cty CP SX Gạch Việt Mỹ,1,0,beingFollowedUp,internal,160500558
+7be7f31c-f367-4ca3-b91e-758020fb9a71,6.22E+12,Cty TNHH Đá Tấm Xây Dựng Cao Cấp ,1,0,beingFollowedUp,internal,622100282
+7d87241d-b2ec-452b-a9f7-2cba33b3787d,6.22E+12,Nguyễn Duy Thuyết,1,4352000000,beingFollowedUp,internal,622100300
+7dfdfec8-7b52-4d17-9d3a-26ffbfa0acec,6.22E+12,Trương Kim Anh,1,1582000000,beingFollowedUp,internal,622100282
+7f55ec99-15d6-4a84-a5b2-3136208d37dc,1.61E+12,Lê Đình Nghĩa,1,0,beingFollowedUp,internal,160500558
+7f994593-d6aa-4974-998d-01276214d146,6.42E+12,Đinh Thanh Bình,1,0,beingFollowedUp,internal,642100564
+80923622-b376-43bf-a8ee-20f230f25422,6.22E+12,Võ Thanh Toàn,5,15000000000,beingFollowedUp,external,622100302
+8122233a-96c5-4512-9f93-09aed531989a,1.61E+12,Công ty CP ĐT XD và KD BĐS Tân Phong,5,16099835342,beingFollowedUp,external,160500558
+8133f162-c235-4e9d-9ac3-80ca734500da,6.22E+12,Đinh Công Chung,1,0,beingFollowedUp,internal,622100282
+815f652d-6835-42e0-a33f-28a99c0718ed,6.42E+12,Cty TNHH Thành Đạt,4,13200000000,beingFollowedUp,external,642100261
+8181d538-0e1c-41f1-8fe2-728a41eeea3f,6.22E+12,Nguyễn Minh Khuê,1,2780000000,beingFollowedUp,internal,622100300
+81aaf490-6804-490d-902a-7c646f0342e6,6.42E+12,Trần Viết Thiết,1,20000000,beingFollowedUp,internal,642100553
+81b82644-463d-4697-8c6f-a94df05f05e3,6.42E+12,Cty TNHH Tư Vấn Trung Thảo,4,1951188891,beingFollowedUp,external,642100517
+820b2372-9950-4c9e-a0e0-3d8158e06a56,1.61E+12,Cty TNHH TM DV Nguyên Hằng,1,0,beingFollowedUp,internal,160500558
+82688bf2-c824-4e08-a048-38b72ddf916d,1.61E+12,Cty TNHH TM DV Nông Sản Việt Hồng Tiến,4,49180000000,beingFollowedUp,external,160500558
+83c08d74-7e71-45f4-9a36-dcd5beff1b6c,6.42E+12,Bùi Minh ái Nghĩa,4,66664000,beingFollowedUp,external,642100564
+846c0178-6411-4f49-bec9-7d4cb1552c9b,1.61E+12,Lê Minh Ngọc,1,19420000,beingFollowedUp,internal,160500556
+84bcfe95-60df-4839-bdc0-27be3b1b4ece,6.42E+12,Cty TNHH MTV TM SX DV Đại Tài,1,0,beingFollowedUp,internal,642100261
+84cc1375-b671-4596-a80c-0dc8f3e79ec2,1.61E+12,Trần Khánh Vân,1,2860000000,beingFollowedUp,internal,160500556
+85129f2c-ac15-4e11-9145-3a4042819665,6.22E+12,Nguyễn Thị Thu Thủy,1,630000000,beingFollowedUp,internal,622100301
+8517c15b-273f-4436-9554-b2a0d7af3ebf,6.42E+12,Lê Thị Diễm,1,34000000,beingFollowedUp,internal,642100545
+856ef787-17e0-4334-b7d7-bfffdf74fed3,1.61E+12,Cty TNHH TM DV DL Minh Khoa,3,25700000000,beingFollowedUp,external,160500558
+85dc1989-da71-484d-bdef-d365e6d01d63,1.61E+12,Cty TNHH XNK Nông Sản Việt Phát,1,0,beingFollowedUp,internal,160500558
+8689a473-ffe9-43a3-acda-5fb9029353f3,6.22E+12,Võ Thanh Tòng,4,14780000000,beingFollowedUp,external,622100282
+87482d8f-80c7-4674-ba65-ad0e29e8f4d6,1.61E+12,Cty TNHH Thép Nam Phương,5,10000000000,beingFollowedUp,external,160500558
+877f1616-d402-41ca-a10e-9bf2e6a37e38,6.42E+12,Cty TNHH TM XD DV Sao Mai,5,460545938,beingFollowedUp,external,642100517
+88a1954c-f5df-4afb-9622-9ce4da2e1d30,1.61E+12,Trương Thị Ngọc Vân,5,50000,beingFollowedUp,internal,160500558
+895de9ac-ca75-4a34-81c9-334ad7aef41a,6.42E+12,Phạm Thị Khánh Ngọc,1,1725000000,beingFollowedUp,internal,642100545
+897e11e6-efe7-4b65-8e1f-1320266a4d01,6.22E+12,Nguyễn Phùng Tân,1,2400000000,beingFollowedUp,internal,622100282
+8a5ca598-f92b-457f-9286-e0a3d7d76a72,6.42E+12,Cty CP Innova Home,5,71353800000,beingSued,external,642100517
+8a9c1a87-9984-4c37-b1f5-fb435b6a2538,1.61E+12,Cty TNHH SX XD TM Thanh Phát,3,4.87E+11,beingFollowedUp,external,160500558
+8af5d48c-5b54-4414-aef1-65923934be6c,1.61E+12,Cty TNHH Nông Sản Đăng Khoa,1,0,beingFollowedUp,internal,160500558
+8dc32116-f4e4-42c9-bbe4-e4ce12f6f473,6.22E+12,Trần Trung Kiên,1,4540000000,beingFollowedUp,internal,622100282
+8e514d9b-6096-4e8c-8d87-3026e57149ef,6.42E+12,Cty TNHH TMDV TV Và ĐT Thiên Phúc Sài Gòn,1,0,beingFollowedUp,internal,642100261
+8e5d4c57-2839-4a02-b07f-69ad375b7fa8,6.22E+12,Phạm Thị Lương,1,1450000000,beingFollowedUp,internal,622100301
+8e69d5c6-bffa-49b1-be38-0c8a3439d613,1.61E+12,Cty CP XNK VT TB DV KV Lê Thương,5,1000000,beingFollowedUp,internal,160500558
+8e979274-9b06-4439-8574-8f301e25775c,6.22E+12,Nguyễn Đức Huynh,4,5797622449,beingFollowedUp,external,622100300
+8ec5a7d5-253f-4304-a1b3-3b8aae999cda,6.42E+12,Cty TNHH TM DV Minh Công Danh,1,0,beingFollowedUp,internal,642100529
+90622148-4ec6-499c-b68c-d2eb21ab0fbd,6.22E+12,Bùi Thị Tường Vân,1,2970000000,beingFollowedUp,internal,622100282
+90c9bcb6-7923-441e-a97f-1d05e7141d7d,6.22E+12,Phạm Thanh Điền,1,2927400000,beingFollowedUp,internal,622100282
+90f9d142-b880-4e70-b6f6-d88b5de0533d,1.61E+12,Cty TNHH Nông Sản Trí Hưng,1,0,beingFollowedUp,internal,160500558
+917607e2-a178-4e47-9fd5-ff45b867cbab,6.42E+12,Lưu Thùy Dương,1,26222144,beingFollowedUp,internal,642100545
+91f7e775-0866-416c-8e26-99c1932e65a3,6.42E+12,Triều Mạnh Đức,1,210000000,beingFollowedUp,internal,642100553
+924975ef-ebff-4adb-a00e-63a20526c4ac,1.61E+12,Cty TNHH Thực Phẩm Vinh Quang,5,38626000000,beingFollowedUp,external,160500558
+92ab52af-67a6-45b1-9fb1-e01ed4d1c5b8,6.42E+12,Nguyễn Thanh Đào,5,24960000,beingFollowedUp,external,642100567
+92cc0e70-cc52-4903-bd78-31c399148014,6.22E+12,Cao Thị Kim Chi,1,240000000,beingFollowedUp,internal,622100300
+92eb5446-94b9-4e0f-aae7-be70f9412b24,1.61E+12,Trần Văn Nhàn,3,10750000,beingFollowedUp,external,160500558
+9303ca7d-d449-4d06-9457-1cec59c13ac3,6.42E+12,Cty TNHH TM DV Đức Nhân,1,0,beingFollowedUp,internal,642100261
+93d8e700-1153-413d-8028-db0c432295bf,6.22E+12,Phạm Thị Thúy Duy,1,750000000,beingFollowedUp,internal,622100300
+950bccae-48bc-42c1-9eb4-947351495876,1.61E+12,Cty TNHH ĐT XD Minh Hùng,1,0,beingFollowedUp,internal,160500558
+955b7a49-61bb-412f-afa2-9a1c603eb5bf,1.61E+12,Trương Thị Ngọc Vân,4,904759405,beingFollowedUp,external,160500558
+957b8698-e2f4-4b9c-bc24-655708c0714b,6.42E+12,Nguyễn Thanh Hải,1,64000000,beingFollowedUp,internal,642100545
+95dc1167-9e0d-47dc-8e81-191bdcf1bcdd,6.22E+12,Nguyễn Thái Hoàng,1,380000000,beingFollowedUp,internal,622100302
+966a6696-d917-4a03-ac20-2dbe9a81a3a5,6.42E+12,Cty TNHH ĐT TM Phan Hào,4,45150000000,beingFollowedUp,external,642100529
+96c0f185-62d3-435b-9ec4-a818f57d7455,1.61E+12,Cty TNHH TM DV XNK Ngọc Khang,4,12500000000,beingFollowedUp,external,160500558
+974ac34e-235a-4b1f-87d8-98b08241dd33,1.61E+12,CTy XDGT Sài Gòn,1,0,beingFollowedUp,internal,160500558
+976e16d5-02aa-4d90-ad3a-73ac5c1fd01b,1.61E+12,Nguyễn Hồng Chương,1,772142000,beingFollowedUp,internal,160500556
+98205c63-3e87-4ba9-8050-576b333130f0,1.61E+12,Cty TNHH TM DV Nông Sản Việt Hồng Tiến,1,0,beingFollowedUp,internal,160500558
+99049c2f-5bd0-4d48-8e61-af63227e39b4,6.42E+12,Mai Khang Duy,1,434100000,beingFollowedUp,internal,642100545
+990e1c98-9c89-4dff-bb75-a834eddbec46,6.42E+12,Nguyễn Thị Thanh Trà,1,188000000,beingFollowedUp,internal,642100553
+99dd08f1-c0de-4863-9370-4ac9666f848c,6.42E+12,Hồ Sinh Nhựt,1,0,beingFollowedUp,internal,642100553
+99fc695f-ce28-4b4d-84fd-ad82fa3efca7,6.42E+12,Cty TNHH TM XNK ORGANIC Ong Biển Sài Gòn,1,0,beingFollowedUp,internal,642100529
+9a291d88-7c96-4a00-805c-e30d2d1f5cb4,1.61E+12,Nguyễn Anh Pha,1,71610000,beingFollowedUp,internal,160500556
+9ae041d0-b482-402d-bbd7-6bbd6f7cc42d,6.42E+12,HTX TM DV Nông Nghiệp Bến Thành Sài Gòn,1,0,beingFollowedUp,internal,642100261
+9b1bdff5-33ba-4d99-8bf9-66a17279c79c,1.61E+12,Cty TNHH SX TM XNK Hòa Phát,1,0,beingFollowedUp,internal,160500558
+9bd322a4-bbfa-473a-9a5d-256ab52d2f23,6.22E+12,Bùi Thanh Thúy,1,1281000000,beingFollowedUp,internal,622100302
+9bf6c5ba-b14e-4897-974d-c4216028285b,6.42E+12,Cty TNHH TM ĐT XNK Packaging Quang Vinh,5,40000000000,beingFollowedUp,external,642100529
+9c041bc0-b609-4bc2-b91e-c8790f7346e8,6.22E+12,Đỗ Thị Huê,1,132000000,beingFollowedUp,internal,622100302
+9c183989-ead4-4b08-8912-82a24682db96,1.61E+12,Công ty TNHH Đầu Tư XD BĐS Huy Bảo,5,0,beingFollowedUp,internal,160500558
+9c6675ad-424b-4ffd-ad80-b20a0fb2045b,6.22E+12,Nguyễn Anh Hào,1,2230000000,beingFollowedUp,internal,622100300
+9d4c15d5-a315-4947-bf1d-6ef91920ba7f,1.61E+12,Cty TNHH ĐT TM DV DL Phương Nam,4,30000000000,beingFollowedUp,external,160500558
+9da0dfcd-c055-4659-8312-67089f488da5,6.22E+12,Trần Thị Diễm Loan,1,1166000000,beingFollowedUp,internal,622100301
+9dcb265a-9559-4271-a8e4-f81d4301d973,6.42E+12,Phạm Duy Mẫn,3,26640000,beingFollowedUp,external,642100567
+9e485a30-a54d-4dfe-a7e2-bd6b7c1433f3,6.42E+12,Cty TNHH TRE FURNITURE,1,0,beingFollowedUp,internal,642100556
+9f8bac48-fa0a-43e1-8dac-88826a0e659e,6.22E+12,Trần Thị Tố Lan,1,4745000000,beingFollowedUp,internal,622100302
+a06025d3-84cd-4ba8-93d6-8c2c6e641f70,6.42E+12,Cty TNHH DV Ăn Uống Đài Gia Phát,5,706708307,beingFollowedUp,external,642100517
+a29c724b-817d-436d-b032-9e6ca9d49293,6.22E+12,Hồ Thị Thu Thảo,1,4590000000,beingFollowedUp,internal,622100282
+a2cba02b-810a-4f36-9302-96eda73f9513,6.42E+12,Huỳnh Chí Kiệt,1,0,beingFollowedUp,internal,642100553
+a32caf76-9e32-401c-9090-50965f4ced39,6.22E+12,Phạm Huy Tín,3,1281620000,beingFollowedUp,external,622100300
+a351e935-1a3a-44ef-845d-931d60ae748d,6.42E+12,Trương Nhật Duy,1,306000000,beingFollowedUp,internal,642100553
+a5854537-2133-4fe7-a9ef-6f65d4f0f41f,1.61E+12,Ngô Hoàng Khánh Linh,1,1020000000,beingFollowedUp,internal,160500556
+a60cad11-6cbe-47a1-9f48-b835f91f6501,6.42E+12,Nguyễn Thị Phương Loan,1,34000000,beingFollowedUp,internal,642100545
+a6188a83-f5c2-4d78-b44f-ac7a113787d2,1.61E+12,Lê Văn Quản,5,7911800,beingFollowedUp,external,160500558
+a64422b0-912b-4e2a-8236-d938f09b66bd,6.22E+12,Nguyễn Tấn Triều,1,2340000000,beingFollowedUp,internal,622100282
+a6de0fe1-c6a7-4031-892a-d2f39406b8b6,6.42E+12,Hồ Sinh Nhựt,5,793377317,beingExecuted,external,642100549
+a96da02c-8342-4565-930a-c36fd6d51f39,6.22E+12,Phạm Thị Minh Hồng,1,318000000,beingFollowedUp,internal,622100301
+aaa20ee9-c2c2-4f2b-8307-020c053c853c,6.42E+12,Nguyễn Thị Thùy Dung,1,20000000,beingFollowedUp,internal,642100553
+ac60e370-2031-4554-9319-f29cddb9c699,6.42E+12,Huỳnh Văn Khánh,3,44390245,beingFollowedUp,external,642100567
+acd51a40-553a-44c8-b00a-a9b63b36a142,6.42E+12,Nguyễn Thị Thanh Hương,1,0,beingFollowedUp,internal,642100564
+ad5f39b5-4d51-4f60-9dab-73ace9845357,1.61E+12,Cty TNHH Vương Điền 68,4,6400000000,beingFollowedUp,external,160500558
+ad62939a-e41a-433c-b256-454e7d0fa62c,6.42E+12,Vũ Thị Thùy Phương,1,80000000,beingFollowedUp,internal,642100553
+ae40ab55-e0e6-4289-9fac-ba9058e00041,6.42E+12,Cty TNHH TM DV DTG,5,46770800000,beingFollowedUp,external,642100529
+ae753562-846f-4757-8d5a-dff298fec99c,6.22E+12,Lê Trung Đính,1,4600000000,beingFollowedUp,internal,622100300
+ae7548ff-fd7a-4cbb-b45f-a796ff269548,6.42E+12,Nguyễn Thị Ngọc Yến,1,0,beingFollowedUp,internal,642100545
+af15550d-829b-4372-87d0-1b5175be974d,1.61E+12,Nguyễn Thái Ngọc,1,246590000,beingFollowedUp,internal,160500556
+afec9d7e-78e6-44ba-b9e5-5be7ad5b5345,1.61E+12,Cty TNHH ĐT XD Minh Hùng,3,36988469100,beingFollowedUp,external,160500558
+afedd00d-2fa8-4b27-abbd-cac391c0a7cb,1.61E+12,Cao Thị Ngọc Lý,1,1950000000,beingFollowedUp,internal,160500556
+b02ab1e8-58ff-4098-a68c-773b2bc023a0,6.22E+12,Nguyễn Vũ Duy,1,2480000000,beingFollowedUp,internal,622100300
+b0ed937d-12ec-4bc4-9e2b-584e0a50bfd0,6.42E+12,Cty TNHH TM VT Tân Sao Việt,1,0,beingFollowedUp,internal,642100529
+b0f4261a-9e6b-470a-a0a1-29eac293cd45,6.42E+12,Phạm Dương Lâm,1,0,beingFollowedUp,internal,642100567
+b1c4d221-7edf-41eb-8a59-c53e993618be,1.61E+12,Cty TNHH TĐ Hưng Thuận Phát,1,0,beingFollowedUp,internal,160500558
+b258bc25-07fb-4f41-a788-2a78c3c9c3c2,6.22E+12,Lê Thị Huệ,1,1450000000,beingFollowedUp,internal,622100282
+b2866003-5c72-408e-a371-7e3b90cd3fb0,6.42E+12,Phan Tuấn Hải,1,85000000,beingFollowedUp,internal,642100545
+b2e5ddf0-7f48-41ab-9d8b-f74a20f0be95,6.42E+12,Nguyễn Thái Trung,1,2044000000,beingFollowedUp,internal,642100545
+b326cba0-9a3d-4101-a91d-38b91675802a,6.22E+12,Đỗ Thị Thu Hiền,1,90000000,beingFollowedUp,internal,622100301
+b363c7a8-1c16-4b95-8217-34c51e2eae75,1.61E+12,Đặng Thành Đô,1,3808315000,beingFollowedUp,internal,160500556
+b3e38e45-5078-4105-baef-949a26d592c6,1.61E+12,Cty TNHH Miền Đất Thép,1,0,beingFollowedUp,internal,160500558
+b468ac95-9da6-41f0-bf37-dddec9d881c2,6.42E+12,Bùi Thị Thanh Hằng,5,700000000,beingFollowedUp,external,642100564
+b5e106a4-4a72-4150-854a-86e90d48f441,6.22E+12,Phạm Thị Thanh Hà,1,1500000000,beingFollowedUp,internal,622100300
+b6068e11-cc93-438a-89cd-8680471d6de2,6.42E+12,Nguyễn Huy Hoàng,1,160000000,beingFollowedUp,internal,642100545
+b6d8c11e-e364-4c2c-9fcb-bdeddd802709,1.61E+12,Cty CP XD Hiệp An,5,5000000,beingFollowedUp,internal,160500558
+b751da4b-7d0f-4fab-80b9-21a0c5e5b3ba,6.42E+12,Lê Trung Kiên,3,800000000,beingFollowedUp,external,642100261
+b7b5d568-6841-473d-873a-89718432ad05,6.22E+12,Hoàng Oanh,1,440000000,beingFollowedUp,internal,622100302
+b7ddb0e0-6455-4ea6-a2b9-5bf7b270d025,6.42E+12,Phan Thị Kiều Vân,1,100000,beingFollowedUp,internal,642100553
+b83f3982-9066-4b3f-b1ca-294371b00ff5,6.42E+12,Lương Quan Hùng,1,703000000,beingFollowedUp,internal,642100553
+b8d06f2b-c54b-4517-8da7-aa9c3f8df15b,6.22E+12,Phạm Thị Thêm,1,1900000000,beingFollowedUp,internal,622100302
+b9c7ecfe-df26-4e5a-a88a-081358790562,6.22E+12,Doanh Nghiệp TN TM - DV Hưng Phát,3,1000000,beingFollowedUp,external,622100302
+bc0d8475-f234-4f23-b1d4-da4e5395bf18,1.61E+12,Cty TNHH Thép Nam Phương,1,0,beingFollowedUp,internal,160500558
+bc46fe16-ec25-4777-b8b1-44438cfaf39c,1.61E+12,Đặng Hồng Phương,1,381000000,beingFollowedUp,internal,160500556
+bc5322c5-88c3-4e57-9926-138352b764da,6.22E+12,Nguyễn Văn Bình,5,100000,beingFollowedUp,external,622100282
+bd018f0b-1e14-4519-8a6b-77b6738bc8bb,1.61E+12,Cty TNHH SX TM Và DV XD Gia Phan,5,39988506000,beingFollowedUp,external,160500558
+bd4073b3-d8c0-4ae9-bdcc-50289a81cd3d,1.61E+12,Cty TNHH TĐ Hưng Thuận Phát,3,4480000000,beingFollowedUp,external,160500558
+bdd45264-681e-434e-bf62-a6b30e5c2ae9,6.42E+12,Cty TNHH TM VT Tân Sao Việt,5,76875000000,beingFollowedUp,external,642100529
+be6cc62f-ffac-4e9c-9316-8f0f3e5c8f01,6.42E+12,Nguyễn Thị Lynh Trang,3,3816500000,beingFollowedUp,external,642100261
+be9e202a-4a5d-43aa-bdf6-0a27c3115e90,1.61E+12,Cty TNHH SX TM XNK Hòa Phát,3,17990000000,beingFollowedUp,external,160500558
+bf44e74d-9010-4f2d-86ca-547bd9381494,6.42E+12,HTX VT-DL Tân Thiên Phú,4,1595042277,beingFollowedUp,external,642100261
+bf65c5a7-1772-4a14-a457-ce23d27b1d77,6.22E+12,Đặng Thị Hồng Quyên,1,5696000000,beingFollowedUp,internal,622100302
+bfd5502f-8e83-4ea2-80c3-c0a5661d0f03,6.22E+12,Nguyễn Mạnh Hải,1,1501600000,beingFollowedUp,internal,622100282
+c04f00ab-3b64-4523-aa50-65b9445811c2,1.61E+12,Cty TNHH Cửu Long Phát,1,0,beingFollowedUp,internal,160500558
+c10a7afc-5ba2-4e0c-a8ed-ed2567a33566,6.42E+12,Phan Thị Mỹ Phương,1,0,beingFollowedUp,internal,642100564
+c15ca5b8-6b65-430b-b6a8-a8b2ed9511fb,6.22E+12,Cty CP Giao Nhận VT Hàng Hóa Biển Xanh,1,245000000,beingFollowedUp,internal,622100302
+c22de0df-f194-4320-b943-53c0c3f98944,6.22E+12,Huỳnh Văn Tiến,1,72000000,beingFollowedUp,internal,622100301
+c23907e1-d593-4132-b3af-472807276505,6.42E+12,Trần Thị Hà Giang,1,42000000,beingFollowedUp,internal,642100545
+c2872213-8ac0-4b5a-963f-4a85d84cb260,1.61E+12,Nguyễn Hoài Sang,1,0,beingFollowedUp,internal,160500558
+c28e9894-7e65-4005-b02b-6f3bf25bfeeb,6.42E+12,Hồng Cẩm Nhung,3,19944167,beingFollowedUp,external,642100567
+c2ae05ca-dd11-4caa-a1f7-5da777242c16,6.42E+12,Huỳnh Chí Kiệt,3,479000000,beingSued,external,642100549
+c38084eb-4576-48cd-abc0-529b58d13cff,1.61E+12,Trần Anh Tuấn,3,1894305560,beingFollowedUp,external,160500558
+c388053d-390c-49b3-b594-e7b4a84b19fb,6.42E+12,Nguyễn Thị Hừng,1,1416250000,beingFollowedUp,internal,642100553
+c3f370be-179f-41b4-9cb2-be926353b8bd,1.61E+12,Nguyễn Thị Ngọc Bích,5,0,beingFollowedUp,internal,160500558
+c456b1bb-f904-4375-a43c-cf7958476c37,6.22E+12,Phạm Thị Phương Linh,1,474000000,beingFollowedUp,internal,622100302
+c4aedda4-583f-48c7-9c5f-3a126e36d1b3,1.61E+12,Cty TNHH ĐT TM DV DL Phương Nam,1,0,beingFollowedUp,internal,160500558
+c4cc8c5f-94f6-4109-92d1-12c8f3dafec2,6.42E+12,Cty TNHH MTV Hoàng Huyên La,4,68300000000,beingFollowedUp,external,642100564
+c4e19999-4a69-4343-ac84-9eac9ae73acd,6.42E+12,Nguyễn Thị Lệ Thu,1,100000000,beingFollowedUp,internal,642100553
+c54d659b-b507-4e58-8a12-b6b9a5125f1f,6.42E+12,Lê Ngọc Vinh,1,105000000,beingFollowedUp,internal,642100545
+c67e1324-a2e2-4472-9d90-4caca7b6ac9f,6.22E+12,Trịnh Văn Bảnh,1,236000000,beingFollowedUp,internal,622100302
+c6cb7b95-07ac-4bff-b722-b7188d9c306a,1.61E+12,Cty TNHH Nhà Hàng Đặc Sản 39,1,0,beingFollowedUp,internal,160500558
+c7741373-2ac6-49f6-9d61-13bf6079d84c,6.22E+12,Trần Thị Khôi,1,2100000000,beingFollowedUp,internal,622100282
+c78af4e3-a0a5-4cb8-b734-8643f932c464,6.22E+12,Lê Minh Chí,1,40000000,beingFollowedUp,internal,622100302
+c82ba062-2f07-452b-b18c-6ed95a8c2fb9,1.61E+12,Ngô Thạch Sơn,1,742800000,beingFollowedUp,internal,160500556
+c8384e14-1b69-40e2-8dc7-3607ba5064fc,1.61E+12,Cty TNHH MTV XNK Nông Sản Thảo Nguyên Xanh,1,0,beingFollowedUp,internal,160500558
+c8ef9e0b-2233-4af8-8173-cf35f1bb5903,6.42E+12,Cty CP TM Và DV Nông Sản Hưng Phú,1,0,beingFollowedUp,internal,642100556
+c8ff8761-05db-411d-9966-fe3b76032cd9,6.42E+12,Cao Gia Đạt,1,17436000,beingFollowedUp,internal,642100553
+c9d86b99-f090-4212-be9e-367d706df9b2,1.61E+12,Cty TNHH Nông Sản VINA,4,30000000000,beingFollowedUp,external,160500558
+ca3467a0-eab8-4cff-b3a7-d6719052db2a,6.42E+12,Phan Lâm Phong,3,1119000000,beingFollowedUp,internal,642100567
+caa416fc-12c7-415e-84ca-ca1e86181dd9,6.22E+12,Nguyễn Thị Thanh Thủy,1,92000000,beingFollowedUp,internal,622100301
+cabd5595-e3aa-46e8-8eab-78558f2b9465,1.61E+12,Đào Thị Phước,1,190000000,beingFollowedUp,internal,160500556
+cb1d1519-9546-4dd7-bd74-4466d6939f83,6.42E+12,Nguyễn Hoàng Huyên,5,2940000000,beingFollowedUp,external,642100564
+ccf4ff24-0b68-46e4-9920-dffde3ce2970,6.22E+12,Trịnh Thị Thắm,1,1610000000,beingFollowedUp,internal,622100302
+cd16c850-0a78-416a-a1b3-95148172a32c,6.22E+12,Nguyễn Tài Thượng,1,391100000,beingFollowedUp,internal,622100301
+cd26b9c8-c544-4689-bd7b-d051f6fc6469,6.42E+12,Trương Tấn Lộc,2,1347000000,beingFollowedUp,internal,642100553
+cd3f4bb7-4129-438d-9e09-8901d53ba8c4,6.22E+12,Vũ Thái Thành,1,8654000000,beingFollowedUp,internal,622100301
+cd907484-9d61-42e7-af96-3a24efd623e4,6.22E+12,Nguyễn Thị Mai Anh,1,50000000,beingFollowedUp,internal,622100300
+ce5ec027-77ac-4214-9533-ecf118cd34fe,1.61E+12,Triều Mạnh Đức,1,473200000,beingFollowedUp,internal,160500556
+ce7466d3-f9b0-406e-aabb-ff88fb78b1e8,6.42E+12,Cty TNHH SX TM DV Thành Khánh,1,22601402278,beingFollowedUp,internal,642100553
+cf53522c-6d34-47ec-b61f-5d961178fb42,1.61E+12,HTX VT DV DL Đại Việt,1,17866300000,beingFollowedUp,internal,160500558
+d06667c6-d59f-42c7-befa-b205cede23d5,6.42E+12,Cty CP Trương Thiên Hà,1,0,beingFollowedUp,internal,642100529
+d119c07b-d9d1-4159-84b8-7cdb490b9786,1.61E+12,Cty TNHH TM DV TV Và ĐT Sài Gòn Việt,3,15000000000,beingFollowedUp,external,160500558
+d24c9258-9f0e-4e60-a66e-91317a588482,6.42E+12,Đoàn Văn Thi,1,167740000,beingFollowedUp,internal,642100553
+d2a7d7e2-aa95-4c21-8dfe-9d3295f879dd,6.22E+12,Trần Xuân Chúc,1,90000000,beingFollowedUp,internal,622100301
+d3020ccd-ac12-49b9-8afe-385dadca07e3,1.61E+12,Cty TNHH UMSORA,1,0,beingFollowedUp,internal,160500558
+d376322c-11e6-4a02-a846-190a273ee719,6.42E+12,Cty TNHH TM DV KT Hòa Phát,1,0,beingFollowedUp,internal,642100517
+d39070ed-2aae-45d6-b6f8-81a7307ae46f,1.61E+12,Nguyễn Thị Hương Diễm,1,1170000000,beingFollowedUp,internal,160500556
+d42672e4-00ae-4054-8f09-48692da5f253,6.22E+12,Lý Thanh Vũ,1,0,beingFollowedUp,internal,622100302
+d450a861-bfcb-4de2-8a37-752a54a74fde,6.22E+12,Cty CP ĐT SX XD DV TM Hưng Phát,1,0,beingFollowedUp,internal,622100302
+d4ebb0b0-1bd2-40fb-882e-ac633eaaf9b9,6.42E+12,Trần Thanh Tâm,1,20000000,beingFollowedUp,internal,642100553
+d54572f6-56d5-43c3-9765-6a61a3dac974,6.22E+12,Hoàng Công Thành,1,1212500000,beingFollowedUp,internal,622100282
+d5a0698d-4f04-421d-b9db-f9a5591530b7,1.61E+12,Nguyễn Văn Nhi,4,35008000,beingFollowedUp,external,160500558
+d5bd4aea-7c7e-40df-9f94-1cbe6a6263f6,6.22E+12,Lê Thị Kim Phụng,1,1360000000,beingFollowedUp,internal,622100282
+d5f9f018-0724-4686-912f-852e795e97d9,6.22E+12,Cty TNHH TM DV Thép Hoàng Thành,1,0,beingFollowedUp,internal,622100300
+d6d1df0b-522f-4fac-b6ec-b81239f46af9,6.22E+12,Nguyễn Văn Khôi,1,3910000000,beingFollowedUp,internal,622100300
+d6f13f15-52ec-4dcc-adc9-6e461f6d6645,1.61E+12,Nguyễn Trường Sơn,1,520000000,beingFollowedUp,internal,160500556
+d6f6f526-4e3a-4e88-b1ce-39100444c2c6,1.61E+12,Lê Đình Nghĩa,5,27760000,beingFollowedUp,external,160500558
+d702572d-0041-476f-8a83-7401094f2cdd,1.61E+12,Cty CP XNK VT TB DV KV Lê Thương,3,3722310447,beingFollowedUp,external,160500558
+d74e5b01-6be6-44e4-9275-17b324f00ec7,6.42E+12,Cty TNHH SX TM Đồ Gỗ Tân Trường Phát,1,0,beingFollowedUp,internal,642100261
+d79044cb-5b76-49f9-979b-86a182327b10,1.61E+12,CTy TNHH XD TM An Thịnh,1,0,beingFollowedUp,internal,160500558
+d7af1a05-a7cc-4365-8863-814d2a1967cf,6.42E+12,Cty TNHH ĐT SX TM XNK Gia Trang,1,0,beingFollowedUp,internal,642100529
+d87011d7-2397-4597-97dd-1ecc82026cf1,1.61E+12,Trương Minh Mẫn,1,38840000,beingFollowedUp,internal,160500556
+d9be8279-d612-49ac-b216-12eef9ff456b,1.61E+12,Cty TNHH DV DL XNK Huỳnh Đức,1,0,beingFollowedUp,internal,160500558
+db6d50d0-c33b-43d9-b5a3-fa3a36302bc8,6.22E+12,Lương Đình Trung,1,1160000000,beingFollowedUp,internal,622100300
+dba18e93-258e-4527-8317-87ed03a70336,6.22E+12,Tô Văn Khéo,2,2820000000,beingFollowedUp,internal,622100282
+dbaa6e97-d9c4-4294-b0a3-9980297de505,6.22E+12,Phạm Văn Huy,1,230000000,beingFollowedUp,internal,622100302
+dc5ad5b2-6be8-4b87-97fe-220cc5e78ef8,6.22E+12,Đào Thị Hảo,1,1275000000,beingFollowedUp,internal,622100302
+dca7892e-9ef4-4eca-8384-1895180afde9,6.42E+12,Hồ Phúc Duy,1,20000000,beingFollowedUp,internal,642100553
+dd24f34c-c036-4797-a92b-b12259de86ee,1.61E+12,Cty TNHH TV SG Khang Minh,4,8600000000,beingFollowedUp,external,160500558
+de45f535-b984-4b99-8a58-9a567bf9844a,6.22E+12,Nguyễn Văn Các,1,300000000,beingFollowedUp,internal,622100282
+de4ef5ab-04d3-45aa-96cd-58694dc9f929,1.61E+12,Nguyễn Văn Nhi,1,0,beingFollowedUp,internal,160500558
+dfc1429a-ace2-4840-9efa-6ad153e3301c,1.61E+12,Phan Tấn Trực,1,27210000,beingFollowedUp,internal,160500556
+e057db0f-13b6-4a6c-a7c4-665b4467c02c,6.22E+12,Phạm Văn Lãnh,1,1050000000,beingFollowedUp,internal,622100302
+e107edd9-8691-4cb1-b5b2-db66dbc0ea81,1.61E+12,Cty CP PT ĐT XD Tân Đại Phát,1,0,beingFollowedUp,internal,160500558
+e11076a8-6829-4d54-a00d-52f8e4008bc2,6.22E+12,Phạm Thanh Tú,1,560000000,beingFollowedUp,internal,622100302
+e21907a7-c19a-466e-81e9-719be7102765,6.42E+12,Hoàng Văn Thất Sơn,5,25795499,beingFollowedUp,external,642100567
+e2a41af4-90b7-48a0-beba-ba706178dc37,1.61E+12,Cty TNHH Điện Máy Quang Khoa,1,0,beingFollowedUp,internal,160500558
+e2b45909-18cc-4b8a-a512-981a65b28ccb,6.42E+12,Mai Thị Ngọc Yến,1,90000000,beingFollowedUp,internal,642100553
+e2bbe431-ad40-473f-964d-0cf180f2a5d6,6.22E+12,Nguyễn Công Khanh,1,1025000000,beingFollowedUp,internal,622100300
+e3939434-0db4-4b8b-b496-9f59b43e2b73,6.42E+12,Nguyễn Thanh Phong,4,427000000,beingFollowedUp,internal,642100545
+e397a939-c671-4e95-9382-9e4619641eb5,6.42E+12,Trương Xuân Bình,1,865000000,beingFollowedUp,internal,642100545
+e4802499-fc2b-4b1c-a567-40c5a484b435,6.42E+12,Hà Thị Thuận,1,7800000000,beingFollowedUp,internal,642100553
+e48258fb-8c93-4353-870d-974afa6e674e,1.61E+12,Cty TNHH Điện Máy Quang Khoa,5,12000000000,beingFollowedUp,external,160500558
+e5295501-3123-4711-a936-b82400b88f1d,6.22E+12,Phạm Huy Bình,1,1300000000,beingFollowedUp,internal,622100302
+e55897f2-d9dd-4444-88a6-23a2ee8c6021,6.42E+12,Cty TNHH TM DV SX Bách Vạn,1,0,beingFollowedUp,internal,642100556
+e5c6abe2-1692-4d48-9a6d-c777534ef8a9,6.42E+12,Nguyễn Tấn Hoài,1,460000000,beingFollowedUp,internal,642100553
+e6c1a357-5332-4a90-934f-2d21ff37b0ff,6.22E+12,Phạm Thị Thanh Phúc,1,800000000,beingFollowedUp,internal,622100300
+e6de13c4-5a06-4146-954f-057d225fa422,1.61E+12,Cty TNHH TV ĐT TM DV Minh Phú,1,0,beingFollowedUp,internal,160500558
+e7260f83-29b9-44ca-8bbf-7da86a38cf01,6.22E+12,Cty TNHH SX TM Thiện Hà,5,0,beingFollowedUp,internal,622100282
+e76602ac-9a66-4bdd-8bec-5d6858d8692b,6.42E+12,Bùi Quốc Huy,1,1197250000,beingFollowedUp,internal,642100553
+e8370176-01d6-4d31-91d1-4efe130ca67f,6.22E+12,Vũ Thành Huế,1,240000000,beingFollowedUp,internal,622100302
+e8bbb81b-6096-4ed0-bdda-da642a2d643b,1.61E+12,Nguyễn Văn Quang,1,43000000,beingFollowedUp,internal,160500556
+e8d2e7d9-1817-4970-86e5-7d4611ac4675,1.61E+12,Trần Công Tuấn,1,54000000,beingFollowedUp,internal,160500558
+e966641b-9b62-4ddb-a8d4-7e31b15d1e97,1.61E+12,Đặng Duy Linh,1,19420000,beingFollowedUp,internal,160500556
+e9720dbd-0c6a-4ab7-80e4-5495b0d12cd9,6.42E+12,Phạm Văn Đốm,4,26635499,beingFollowedUp,external,642100567
+e98f2401-b022-4c94-a36a-b84c81e03026,6.22E+12,Phạm Thị Kim Thu,1,305000000,beingFollowedUp,internal,622100302
+ea1dd508-1244-44c8-bc45-152960bb1511,6.22E+12,Phạm Thị Vi,1,1450000000,beingFollowedUp,internal,622100282
+ec0847b4-007d-4f7c-9e9c-597f82529218,1.61E+12,Phạm Hoàng Hoa,4,155555560,beingFollowedUp,external,160500558
+ec5dd0c9-b117-4830-8f87-a1cc8be1dc89,6.22E+12,Cty CP ĐT SX XD DV TM Hưng Phát,3,1000000,beingFollowedUp,external,622100302
+ec89dcdd-340f-40f1-888c-1d26d8ee0dec,1.61E+12,Lê Văn Quản,1,0,beingFollowedUp,internal,160500558
+ed15e594-7b2d-44a8-bd1b-6c90100df04f,6.42E+12,Trần Minh Đức,5,0,beingFollowedUp,internal,642100545
+ee52b7e3-aa39-484c-a882-82e12d06c322,6.42E+12,Cty TNHH XNK Hồng Việt Tiến,1,0,beingFollowedUp,internal,642100261
+ee7f6265-b391-461c-8146-646356f8f13f,1.61E+12,Cty TNHH Cửu Long Phát,3,46044053000,beingFollowedUp,external,160500558
+eef00b1d-22e8-48df-aad7-bccddd30c7b6,6.22E+12,Trịnh Thùy Dung,1,135000000,beingFollowedUp,internal,622100301
+ef61e382-a9ef-4763-ad8c-9397f67c7f08,1.61E+12,Cty TNHH TM DV TV Và ĐT Sài Gòn Việt,1,0,beingFollowedUp,internal,160500558
+eff611a4-842f-4500-b89c-1725b0348ca1,6.22E+12,Nguyễn Tuấn Anh,1,2980000000,beingFollowedUp,internal,622100302
+f046cb8f-0950-44d2-99bc-900f4bc38b44,6.42E+12,Cty TNHH XNK Hồng Việt Tiến,5,5231058600,beingFollowedUp,external,642100261
+f05a1954-567f-41fb-b513-071847feacfc,6.22E+12,Trần Thị Thìn,1,970000000,beingFollowedUp,internal,622100302
+f076d341-8ac0-4582-af29-c0b503c7eb68,6.22E+12,Phan Cảnh Thế Mỹ,1,0,beingFollowedUp,internal,622100282
+f0bf3b71-c9cb-4518-94b9-5be77fc61916,6.22E+12,Võ Thị ái Trưng,1,4218000000,beingFollowedUp,internal,622100302
+f10c5e30-1b36-4104-81e6-b8f9ba45dc5e,1.61E+12,Mai Khang Duy,1,536243000,beingFollowedUp,internal,160500556
+f19e768a-d217-4d24-b5c1-8637588cde00,6.42E+12,Trần Hoàng Anh Tuấn,5,420000000,beingFollowedUp,internal,642100545
+f2024b18-08ee-4ac2-bd7c-896e74041033,1.61E+12,Phạm Tuấn Đức,1,482666688,beingFollowedUp,internal,160500556
+f27f8a51-e818-4eb0-a60e-3c821eaf0b25,6.22E+12,Nguyễn Văn Sinh,1,1671100000,beingFollowedUp,internal,622100301
+f2d4b07f-64c2-486f-ac6f-2cfd8ebb67d1,6.42E+12,Bùi Thị Thanh Hằng,1,0,beingFollowedUp,internal,642100564
+f35238de-aa3e-49e3-bd3a-100095d29c53,6.22E+12,Tô Văn Tám,1,3659600000,beingFollowedUp,internal,622100302
+f3cc832f-217f-4923-9874-63c7aba84943,6.22E+12,Vũ Thị Kim Dung,1,855000000,beingFollowedUp,internal,622100302
+f4a53759-5552-47c2-bd4a-88ad6086895e,6.22E+12,Nguyễn Kim Anh,1,585000000,beingFollowedUp,internal,622100301
+f5ab93e3-86ff-4b00-aaad-c4be12ebf375,6.42E+12,Nguyễn Văn Ry,5,18645000,beingFollowedUp,external,642100567
+f5d718ba-f082-42f7-aaaf-6d3a7f36809d,1.61E+12,Cty TNHH Nông Sản Hoàng Khang,4,20000000000,beingFollowedUp,external,160500558
+f64ef891-3082-476d-b190-a22da614cad4,1.61E+12,Cty TNHH Vương Điền 68,1,0,beingFollowedUp,internal,160500558
+f6cb0bbe-09dc-4dd3-bf31-9d12a1d991fc,1.61E+12,Trần Thị út Ngân ,1,239500000,beingFollowedUp,internal,160500556
+f8103145-3c5a-4ade-ad01-4dad2dd0cddf,1.61E+12,CTy TNHH Lập Đạt Tư,3,30000000000,beingFollowedUp,external,160500558
+f82e1cea-97a1-488b-8153-754f2379f388,6.22E+12,Lâm Ngọc Trang,1,7167972935,beingFollowedUp,internal,622100282
+f9054b6a-f8bd-418c-a47e-e70a6f71b26a,6.42E+12,Nguyễn Trần Phương Thảo,5,107726,beingFollowedUp,internal,642100553
+f93bd4cc-6fad-4c12-930f-3760c388c730,1.61E+12,Cty TNHH TM DV DL Minh Khoa,1,0,beingFollowedUp,internal,160500558
+f9a4ea7b-54bb-42ee-a7c6-acfbb4d5855e,6.42E+12,Nguyễn Văn Sang,4,6240000,beingFollowedUp,external,642100567
+fa030963-81e4-462b-9528-2565d18360b0,6.22E+12,Liêu Vũ Minh,3,989222400,beingFollowedUp,external,622100282
+fa380046-3c5e-4568-886f-339107326a16,6.22E+12,Trương Kim Tiền,1,170000000,beingFollowedUp,internal,622100301
+fa44c777-c8b3-4ced-86c3-4dd0a63e5356,6.42E+12,Võ Minh Tuấn,1,0,beingFollowedUp,internal,642100564
+fa61afd4-7cf4-44d8-9272-bd72e9cb2842,1.61E+12,Cty TNHH KD DV Thuận Thuận Phát,1,0,beingFollowedUp,internal,160500558
+fbe57b4b-0a65-444d-8b9e-15fd372f5a09,6.42E+12,Lê Hữu Quang,3,107928000,beingFollowedUp,external,642100567
+fbfad9b2-d795-4f95-bfeb-860321ea7616,6.42E+12,Cty CP Liên Minh,5,0,beingFollowedUp,internal,642100529
+fd3e4f46-f505-4e51-a4ab-60f93dc50ccf,1.61E+12,Cty TNHH DV DL XNK Huỳnh Đức,5,12502901000,beingFollowedUp,external,160500558
+fd5f5c75-f13f-4ecf-8510-beeca58b2bed,1.61E+12,Tạ Thị Thanh Liễu,1,500000,beingFollowedUp,internal,160500556
+fd8dd633-7c3c-45da-a97a-25452f2eb5cd,6.22E+12,Hoàng Ngọc Anh,1,1222000000,beingFollowedUp,internal,622100301
+fdbdedd2-53a2-47db-9227-319ef05d4393,1.61E+12,Dương Thống Nhất,3,4670000,beingFollowedUp,external,160500558
+fea47949-d632-4e57-9ba5-1a9dbd5b3134,1.61E+12,Nguyễn Thị Huỳnh Thanh,1,19420000,beingFollowedUp,internal,160500556
+fede9b1c-d3d4-430a-9a58-d8fe92eaa020,6.42E+12,Huỳnh Thị Thu Vân,1,1080000000,beingFollowedUp,internal,642100553
+fee05d46-a905-4051-a7dc-a3c892bb1375,1.61E+12,Cty TNHH TM DV Nguyên Hằng,3,27000000000,beingFollowedUp,external,160500558
+ff2ef38e-6e36-48ef-a1ab-884d4e9b872a,6.42E+12,Cty TNHH ĐT TM An Vĩnh Tường,4,48302531145,beingFollowedUp,external,642100261
+ff51309a-5563-4cd2-841f-f673ec33131e,6.22E+12,Võ Anh Đào,1,1250000000,beingFollowedUp,internal,622100300
+ff713bd4-7735-4644-8295-3c388fed2cdc,6.22E+12,Trương Minh Hoàng,1,0,beingFollowedUp,internal,622100302
+ffb8e120-a21f-4b52-927e-c7466c311377,6.42E+12,Cty TNHH ĐT TM An Vĩnh Tường,1,0,beingFollowedUp,internal,642100261
+ffc85407-2a88-45a9-b067-07b5a885cfbf,1.61E+12,Trần Văn Hồng,1,4130000,beingFollowedUp,internal,160500556

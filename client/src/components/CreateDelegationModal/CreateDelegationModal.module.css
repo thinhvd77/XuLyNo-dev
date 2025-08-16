@@ -1,0 +1,612 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1002;
+  padding: 20px;
+  pointer-events: auto;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 1500px;
+  max-height: 95vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1003;
+  pointer-events: auto;
+}
+
+/* Step Indicator */
+.stepIndicator {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 24px;
+  border-bottom: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.step span:first-child {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 8px;
+  transition: all 0.3s;
+}
+
+.step.active span:first-child {
+  background-color: var(--primary-color, #007bff);
+  color: white;
+}
+
+.step span:last-child {
+  font-size: 14px;
+  color: #6c757d;
+  text-align: center;
+  max-width: 200px;
+}
+
+.step.active span:last-child {
+  color: var(--primary-color, #007bff);
+  font-weight: 500;
+}
+
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background-color: #e9ecef;
+  z-index: -1;
+}
+
+.step.active:not(:last-child)::after {
+  background-color: var(--primary-color, #007bff);
+}
+
+/* Step Content */
+.stepContent {
+  min-height: 300px;
+}
+
+.stepContent h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Cases List */
+.casesList {
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.selectAllContainer {
+  padding: 12px;
+  border-bottom: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+  position: relative;
+  z-index: 7;
+  pointer-events: auto;
+}
+
+.casesContainer {
+  max-height: 300px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 5;
+}
+
+.caseItem {
+  padding: 12px;
+  border-bottom: 1px solid #f1f3f4;
+  position: relative;
+  z-index: 6;
+  pointer-events: auto;
+}
+
+.caseItem:last-child {
+  border-bottom: none;
+}
+
+.caseItem:hover {
+  background-color: #f8f9fa;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  gap: 10px;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.checkboxLabel input[type='checkbox'] {
+  margin-top: 4px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 11;
+  pointer-events: auto;
+}
+
+.caseInfo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0; /* we will use separators instead of gaps */
+}
+
+/* Add a vertical bar separator before every sibling after the first */
+.caseInfo > * + * {
+  position: relative;
+  padding-left: 12px;
+  margin-left: 12px;
+}
+
+.caseInfo > * + *::before {
+  content: '|';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #adb5bd;
+}
+
+.caseId {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  padding-right: 12px;
+}
+
+.caseName {
+  color: #666;
+  font-size: 13px;
+  margin: 2px 0;
+}
+
+.caseType {
+  color: #6c757d;
+  font-size: 13px;
+  margin: 2px 0;
+}
+
+.externalCase {
+  color: #ffa726;
+  font-size: 15px;
+  font-weight: 900;
+  margin: 2px 0;
+}
+
+.internalCase {
+  color: #005bac;
+  font-size: 15px;
+  font-weight: 900;
+  margin: 2px 0;
+}
+
+.caseAmount {
+  color: var(--primary-color, #007bff);
+  font-weight: 500;
+  font-size: 13px;
+  padding-right: 12px;
+}
+
+.selectedInfo {
+  padding: 8px 12px;
+  background-color: #e7f3ff;
+  color: var(--primary-color, #007bff);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.noData {
+  padding: 40px;
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.loading {
+  padding: 40px;
+  text-align: center;
+  color: #6c757d;
+}
+
+/* Summary Info */
+.summaryInfo {
+  background-color: #f8f9fa;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.summaryInfo p {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+.summaryInfo p:last-child {
+  margin-bottom: 0;
+}
+
+/* Button Group */
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 16px;
+  z-index: 100;
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid;
+}
+
+.primaryButton {
+  background-color: var(--primary-color, #007bff);
+  color: white;
+  border-color: var(--primary-color, #007bff);
+}
+
+.primaryButton:hover:not(:disabled) {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.primaryButton:disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.secondaryButton {
+  background-color: #6c757d;
+  color: white;
+  border-color: #6c757d;
+}
+
+.secondaryButton:hover {
+  background-color: #545b62;
+  border-color: #545b62;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.closeButton:hover {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.form {
+  padding: 24px;
+}
+
+.fieldGroup {
+  margin-bottom: 20px;
+}
+
+.fieldGroup label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.fieldGroup select,
+.fieldGroup input,
+.fieldGroup textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  box-sizing: border-box;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  appearance: menulist;
+}
+
+.fieldGroup select:focus,
+.fieldGroup input:focus,
+.fieldGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary-color, #007bff);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.fieldGroup select:disabled {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.fieldGroup select option {
+  padding: 8px 12px;
+  background-color: white;
+  color: #333;
+}
+
+.fieldGroup textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25) !important;
+}
+
+.errorText {
+  display: block;
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.inputError {
+  border-color: #dc3545;
+}
+
+.inputError:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
+}
+
+.errorText {
+  display: block;
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.helpText {
+  display: block;
+  color: #6c757d;
+  font-size: 12px;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.formActions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.cancelButton,
+.submitButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 100px;
+}
+
+.cancelButton {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancelButton:hover:not(:disabled) {
+  background-color: #5a6268;
+}
+
+.submitButton {
+  background-color: var(--primary-color, #007bff);
+  color: white;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: var(--primary-hover-color, #0056b3);
+}
+
+.cancelButton:disabled,
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.select:disabled {
+  background-color: #f8f9fa;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Loading state for form */
+.isSubmitting {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .modalOverlay {
+    padding: 10px;
+  }
+
+  .modalContent {
+    max-height: 95vh;
+  }
+
+  .modalHeader {
+    padding: 16px 20px;
+  }
+
+  .modalHeader h2 {
+    font-size: 18px;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .formActions {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  .cancelButton,
+  .submitButton {
+    width: 100%;
+    padding: 12px 20px;
+  }
+}
+
+/* Animation */
+.modalOverlay {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modalContent {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Quantity Select Bar */
+.quantitySelectBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 12px;
+  padding: 12px;
+  border: 1px dashed #e9ecef;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background-color: #fcfcfd;
+}
+
+.quantityLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quantityLabel {
+  font-size: 13px;
+  color: #555;
+}
+
+.quantitySelectBar input[type='number'] {
+  width: 160px;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.quantityRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.inlineCheckbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}

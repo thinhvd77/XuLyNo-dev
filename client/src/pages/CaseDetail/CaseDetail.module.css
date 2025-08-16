@@ -1,0 +1,1018 @@
+:root {
+  --primary-color: #da251d;
+  --primary-color-light: #fbe9e7;
+  --secondary-color: #00542b;
+  --secondary-color-light: #e8f5e9;
+  --text-light: #6c757d;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.1);
+  --text-color: #333;
+  --body-bg: #f4f7fa;
+}
+
+/* Container optimization for 1600x900 - No scrolling */
+.caseDetailContainer {
+  height: 720px;
+  max-height: 900px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 0 24px;
+}
+
+/* Page Header - Keep original style but optimize height */
+.pageHeader {
+  flex-shrink: 0;
+  margin-bottom: 0;
+  padding: 10px 24px;
+  background: var(--card-bg);
+}
+
+.pageHeader h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color);
+}
+
+/* Breadcrumb navigation - Keep original */
+.breadcrumb {
+  margin: 0;
+}
+
+.breadcrumb ol {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--text-light);
+}
+
+.breadcrumb li::after {
+  content: '/';
+  margin: 0 8px;
+}
+
+.breadcrumb li:last-child::after {
+  content: '';
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Main layout grid - Optimized for 1600x900 */
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 24px;
+  padding: 0 24px;
+  flex: 1;
+  overflow: hidden;
+  align-items: start;
+}
+
+/* Left column with info cards - Keep original style */
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Card styles - Original style with slight improvements */
+.card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.card:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: -24px -20px 16px -24px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 600;
+}
+
+/* Info grid - Keep original layout */
+.infoGrid {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 8px 8px;
+}
+
+.infoGrid dt {
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.infoGrid dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.infoGrid dd strong {
+  color: var(--primary-color);
+}
+
+/* Form elements - Keep original styling */
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.formControl {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: none;
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.button:hover {
+  background-color: #c41e17;
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Right column with tabs - Keep original design with height optimization */
+.tabsColumn {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Tab navigation - Keep original style */
+.tabNav {
+  display: flex;
+  margin: 0;
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+
+.tabButton {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-light);
+  border: none;
+  background: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.2s ease;
+}
+
+.tabButton.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tabButton:hover {
+  color: var(--text-color);
+}
+
+/* Tab content - Allow timeline component to handle its own scrolling */
+.tabContent {
+  padding: 0 16px;
+  flex: 1;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 100px);
+}
+
+/* Timeline - Only this section scrolls - Smaller height */
+.timeline {
+  max-height: 300px;
+  height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+  padding-left: 25px;
+  position: relative;
+  flex: 1;
+}
+
+.timeline::before {
+  display: none;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.timelineIcon {
+  position: absolute;
+  left: -26px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+  color: rgb(174, 28, 63);
+}
+
+/* Divider - Keep original */
+.divider {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 12px 0;
+}
+
+/* Document uploader - Keep original design */
+.uploaderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dropzone {
+  border: 2px dashed var(--border-color);
+  border-radius: 6px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background-color 0.2s;
+}
+
+.dropzone:hover,
+.dropzone.dragActive {
+  border-color: var(--primary-color);
+  background-color: #f8f9fa;
+}
+
+/* File list - Keep original with better scrolling */
+.fileList {
+  margin-top: 16px;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.fileList h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.fileList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.fileQueueItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.fileQueueItem.waiting {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.fileQueueItem.success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.fileQueueItem.error {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.fileName {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileSize {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+/* Sub-tabs for file types - Updated version */
+.subTabNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 16px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.subTabButton {
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: white;
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: fit-content;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.subTabButton:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.subTabButton.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* File grid for uploaded files */
+.fileGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  padding: 4px;
+}
+
+.fileCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.fileCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.fileIcon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+.fileCardTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileCardMeta {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Loading states */
+.loadingSpinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: var(--text-muted);
+}
+
+/* Add scrollbar styles for filesList */
+.filesList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filesList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.filesList::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+/* Custom scrollbar - Subtle improvements */
+.timeline::-webkit-scrollbar,
+.tabContent::-webkit-scrollbar,
+.infoColumn::-webkit-scrollbar,
+.fileList ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.timeline::-webkit-scrollbar-track,
+.tabContent::-webkit-scrollbar-track,
+.infoColumn::-webkit-scrollbar-track,
+.fileList ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.timeline::-webkit-scrollbar-thumb,
+.tabContent::-webkit-scrollbar-thumb,
+.infoColumn::-webkit-scrollbar-thumb,
+.fileList ul::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.timeline::-webkit-scrollbar-thumb:hover,
+.tabContent::-webkit-scrollbar-thumb:hover,
+.infoColumn::-webkit-scrollbar-thumb:hover,
+.fileList ul::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.timeline::-webkit-scrollbar-thumb:hover,
+.tabContent::-webkit-scrollbar-thumb:hover,
+.infoColumn::-webkit-scrollbar-thumb:hover,
+.fileList ul::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.loadingSpinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: var(--text-light);
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.statusBadge.active {
+  background: #dcfce7;
+  color: var(--success-color);
+}
+
+.statusBadge.pending {
+  background: #fef3c7;
+  color: var(--warning-color);
+}
+
+.statusBadge.inactive {
+  background: #f3f4f6;
+  color: var(--text-muted);
+}
+
+.fileStatus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.statusText {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.fileQueueItem.waiting .statusText {
+  color: #6c757d;
+}
+
+.fileQueueItem.success .statusText {
+  color: #155724;
+}
+
+.fileQueueItem.error .statusText {
+  color: #721c24;
+}
+.fileTypeBadge {
+  background-color: #6c757d;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.fileName {
+  font-weight: 500;
+}
+.fileList .removeDoc {
+  background: none;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: #dc3545;
+}
+
+.uploadBTN {
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: white;
+  color: rgb(174, 28, 63);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.uploadBTN:hover {
+  color: white;
+  background-color: rgb(174, 28, 63);
+}
+
+/* --- CSS CHO TAB TÀI LIỆU ĐÃ TẢI LÊN --- */
+.subTabNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 16px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.subTabButton {
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: white;
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: fit-content;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.subTabButton:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.subTabButton.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.activeFileContent {
+  margin-top: 12px;
+  height: calc(100% - 120px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.fileCategory {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.noFiles {
+  color: var(--text-light);
+  font-style: italic;
+  margin: 8px 0;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Uploaded files list styles (already saved files) */
+.filesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+  min-height: 0;
+}
+
+.fileItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  transition: box-shadow 0.2s ease;
+  width: 100%;
+  min-height: 70px;
+}
+
+.fileItem:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fileItem:hover .fileIcon svg {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.fileIcon {
+  font-size: 28px;
+  min-width: 36px;
+  text-align: center;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon colors based on file types */
+.fileIcon svg {
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+/* More specific targeting for file type colors */
+.fileItem[data-mime*='pdf'] .fileIcon svg,
+.fileItem[data-filename*='.pdf'] .fileIcon svg {
+  color: #dc3545;
+}
+
+.fileItem[data-mime*='word'] .fileIcon svg,
+.fileItem[data-mime*='document'] .fileIcon svg,
+.fileItem[data-filename*='.doc'] .fileIcon svg {
+  color: #0d6efd;
+}
+
+.fileItem[data-mime*='excel'] .fileIcon svg,
+.fileItem[data-mime*='sheet'] .fileIcon svg,
+.fileItem[data-filename*='.xls'] .fileIcon svg {
+  color: #198754;
+}
+
+.fileItem[data-mime*='powerpoint'] .fileIcon svg,
+.fileItem[data-mime*='presentation'] .fileIcon svg,
+.fileItem[data-filename*='.ppt'] .fileIcon svg {
+  color: #fd7e14;
+}
+
+.fileItem[data-mime*='image'] .fileIcon svg {
+  color: #6f42c1;
+}
+
+.fileItem[data-mime*='video'] .fileIcon svg {
+  color: #6610f2;
+}
+
+.fileItem[data-mime*='audio'] .fileIcon svg {
+  color: #d63384;
+}
+
+.fileItem[data-mime*='zip'] .fileIcon svg,
+.fileItem[data-mime*='rar'] .fileIcon svg,
+.fileItem[data-mime*='7z'] .fileIcon svg {
+  color: #495057;
+}
+
+.fileDetails {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.fileName {
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 3px;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+.fileInfo {
+  font-size: 11px;
+  color: var(--text-light);
+  line-height: 1.2;
+}
+
+.fileActions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.downloadBtn,
+.deleteBtn,
+.previewBtn {
+  padding: 6px 12px;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.previewBtn {
+  color: #4f46e5;
+  border-color: #e0e7ff;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewBtn:hover {
+  background-color: #4f46e5;
+  color: white;
+  border-color: #4f46e5;
+  box-shadow: 0 1px 3px rgba(79, 70, 229, 0.12);
+}
+
+.previewBtn:active {
+  background-color: #3730a3;
+  border-color: #3730a3;
+}
+
+.downloadBtn {
+  color: #059669;
+  border-color: #d1fae5;
+  background-color: #f0fdf4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.downloadBtn:hover {
+  background-color: #059669;
+  color: white;
+  border-color: #059669;
+  box-shadow: 0 1px 3px rgba(5, 150, 105, 0.12);
+}
+
+.downloadBtn:active {
+  background-color: #047857;
+  border-color: #047857;
+}
+
+.deleteBtn {
+  color: #dc2626;
+  border-color: #fecaca;
+  background-color: #fef2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteBtn:hover {
+  background-color: #dc2626;
+  color: white;
+  border-color: #dc2626;
+  box-shadow: 0 1px 3px rgba(220, 38, 38, 0.12);
+}
+
+.deleteBtn:active {
+  background-color: #b91c1c;
+  border-color: #b91c1c;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modalContent {
+  background-color: white;
+  border-radius: 8px;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: #f8f9fa;
+}
+
+.modalHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  max-width: 700px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.closeButton:hover {
+  background-color: #e9ecef;
+  color: #333;
+}
+
+.modalBody {
+  flex: 1;
+  overflow: auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-color);
+  background-color: #f8f9fa;
+}
+
+.modalFooter p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Load More Button */
+.loadMoreContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+.loadMoreButton {
+  background: none;
+  color: rgb(174, 28, 63);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.loadMoreButton:hover:not(:disabled) {
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
+
+.loadMoreButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Total Count Indicator */
+.totalCountContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+.totalCount {
+  color: var(--text-light);
+  font-size: 13px;
+  font-style: italic;
+  background: #f8f9fa;
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}

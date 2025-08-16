@@ -1,0 +1,385 @@
+:root {
+  --primary-color: #da251d;
+  --primary-color-light: #fbe9e7;
+  --secondary-color: #00542b;
+  --secondary-color-light: #e8f5e9;
+  --success-color: #28a745;
+  --success-color-light: #d4edda;
+  --info-color: #007bff;
+  --info-color-light: #d1ecf1;
+  --warning-color: #ffc107;
+  --warning-color-light: #fff3cd;
+  --text-light: #6c757d;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --text-color: #333;
+  --body-bg: #f8f9fa;
+
+  /* Status colors - đồng bộ với DirectorDashboard */
+  --status-being-followed-up: #1e88e5; /* Đang đôn đốc - xanh dương */
+  --status-being-sued: #ef6c00; /* Đang khởi kiện - cam */
+  --status-awaiting-judgment-effect: #f9a825; /* Chờ hiệu lực án - vàng */
+  --status-being-executed: #c62828; /* Đang thi hành án - đỏ */
+  --status-proactively-settled: #8e24aa; /* Chủ động XLTS - tím */
+  --status-debt-sold: #607d8b; /* Bán nợ - xám xanh */
+  --status-amc-hired: #388e3c; /* Thuê AMC XLN - xanh lá */
+}
+
+.managerDashboard {
+  padding: 0;
+  flex: 1;
+  max-height: 92vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.pageHeader {
+  flex-shrink: 0;
+  padding: 0px 20px 0 20px;
+}
+
+.headerContent h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: var(--text-color);
+}
+
+.headerContent p {
+  color: var(--text-light);
+  margin: 0 0 12px 0;
+  font-size: 14px;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /* margin-top: 8px; */
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.summary span {
+  color: var(--text-color);
+}
+
+.summary strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.departmentInfo {
+  /* background: linear-gradient(135deg, var(--secondary-color), #2e7d32); */
+  color: white;
+  padding: 4px 12px;
+  /* border-radius: 16px; */
+  font-size: 12px;
+  font-weight: 500;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); */
+}
+
+/* Filter Section */
+.filterSection {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 20px;
+}
+
+.searchBox {
+  flex: 1;
+  max-width: 400px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(218, 37, 29, 0.1);
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  /* align-items: center; */
+}
+
+.filterSelect {
+  padding: 12px 40px 12px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  min-width: 150px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(218, 37, 29, 0.1);
+}
+
+.filterSelect:hover {
+  border-color: var(--primary-color);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23DA251D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+/* Table with Pagination */
+.tableWithPagination {
+  height: calc(100vh - 50px); /* Adjust height to fit pagination */
+  margin: 0px 20px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 5px;
+  flex-shrink: 0;
+  background: white;
+  margin-top: auto;
+}
+
+.pageBtn {
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  background: white;
+  color: var(--text-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+.pageBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Case Type Badges - đồng bộ với DirectorDashboard */
+.caseTypeBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.internal {
+  background-color: #005bac;
+  color: #fff;
+  border: 1px solid #005bac;
+}
+
+.external {
+  background-color: #ffa726;
+  color: #fff;
+  border: 1px solid #ffa726;
+}
+
+.date {
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.officer {
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Status badge classes - đồng bộ với MyCases */
+.beingFollowedUp {
+  background-color: var(--status-being-followed-up);
+  color: #ffffff;
+}
+.beingSued {
+  background-color: var(--status-being-sued);
+  color: #ffffff;
+}
+.awaitingJudgmentEffect {
+  background-color: var(--status-awaiting-judgment-effect);
+  color: #ffffff;
+}
+.beingExecuted {
+  background-color: var(--status-being-executed);
+  color: #ffffff;
+}
+.proactivelySettled {
+  background-color: var(--status-proactively-settled);
+  color: #ffffff;
+}
+.debtSold {
+  background-color: var(--status-debt-sold);
+  color: #ffffff;
+}
+.amcHired {
+  background-color: var(--status-amc-hired);
+  color: #ffffff;
+}
+
+.statusDefault {
+  background: #f8f9fa;
+  color: var(--text-light);
+}
+
+/* Error Container */
+.errorContainer {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  margin: 2rem;
+}
+
+.errorContainer h2 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.errorContainer p {
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.retryButton {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.retryButton:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filterSection {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .searchBox {
+    max-width: none;
+  }
+
+  .filters {
+    justify-content: space-between;
+  }
+
+  .filterSelect {
+    min-width: 140px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .departmentInfo {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .managerDashboard {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .tableWithPagination {
+    margin: 0 10px 10px 10px;
+  }
+
+  .pageHeader {
+    padding: 0 10px;
+  }
+
+  .filterSection {
+    padding: 12px 10px;
+  }
+
+  .headerContent h1 {
+    font-size: 20px;
+  }
+
+  .caseTypeBadge,
+  .beingFollowedUp,
+  .beingSued,
+  .awaitingJudgmentEffect,
+  .beingExecuted,
+  .proactivelySettled,
+  .debtSold,
+  .amcHired,
+  .statusDefault {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    min-width: 80px;
+  }
+}

@@ -1,0 +1,174 @@
+/* --- Wrapper style để căn giữa trang --- */
+.loginPageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+  background-image: url('../../assets/bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+:root {
+  --primary-color: rgb(174, 28, 63);
+  --primary-color-darker: rgb(154, 21, 52);
+  --dark-color: #212529;
+  --border-color: #ced4da;
+  --border-color-focus: #8ab4f8;
+  --error-bg-color: #f8d7da;
+  --error-text-color: #721c24;
+  --error-border-color: #f5c6cb;
+}
+
+.loginContainer {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  /* max-width: 250px; */
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+.loginContainer h1 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.formControl {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 16px;
+  transition:
+    border-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.formControl:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-color: var(--border-color-focus);
+  box-shadow: 0 0 0 2px rgba(24, 128, 255, 0.25);
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordWrapper .formControl {
+  padding-right: 45px;
+}
+
+.passwordToggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  color: #6c757d;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.passwordToggle:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+.passwordToggle:hover {
+  background-color: #e9ecef;
+}
+
+.eye-icon {
+  width: 20px;
+  height: 20px;
+}
+.eye-slash-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(174, 28, 63);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.loginButton:hover:not(:disabled) {
+  background-color: var(--primary-color-darker);
+  transform: translateY(-2px);
+}
+
+.loginButton:disabled {
+  background-color: #aaa;
+  cursor: wait;
+  transform: translateY(0);
+}
+
+.errorMessage {
+  background-color: var(--error-bg-color);
+  color: var(--error-text-color);
+  border: 1px solid var(--error-border-color);
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+/* --- PHẦN CSS MỚI CHO RESPONSIVE --- */
+@media (max-width: 480px) {
+  .loginContainer {
+    padding: 24px; /* Giảm padding trên màn hình nhỏ */
+  }
+
+  .loginContainer h1 {
+    font-size: 20px; /* Giảm kích thước tiêu đề */
+  }
+
+  .formControl {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .loginButton {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

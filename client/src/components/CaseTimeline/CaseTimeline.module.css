@@ -1,0 +1,403 @@
+/* Case Timeline Styles */
+.caseTimeline {
+  padding: 0 20px;
+  padding-top: 10px;
+  background: white;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timelineHeader h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  padding: 10px 0;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+}
+
+.filters button {
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  color: #6b7280;
+}
+
+.filters button:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.filters button.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: white;
+}
+
+.timelineList {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+  margin: 0;
+  padding-top: 5px;
+  padding-right: 5px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+/* Remove any existing pseudo-elements first - MAX SPECIFICITY */
+.caseTimeline .timelineList .timelineItem::before,
+.caseTimeline .timelineList .timelineItem::after,
+.caseTimeline .timelineItem::before,
+.caseTimeline .timelineItem::after {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+}
+
+/* ABSOLUTE OVERRIDE for last item */
+.caseTimeline .timelineList .timelineItem.lastItem::before,
+.caseTimeline .timelineList .timelineItem.lastItem::after,
+.caseTimeline .timelineItem.lastItem::before,
+.caseTimeline .timelineItem.lastItem::after {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+  background: transparent !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Only add line to non-last items - MAX SPECIFICITY */
+.caseTimeline .timelineList .timelineItem:not(:last-child):not(.lastItem)::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 19px !important;
+  top: 20px !important;
+  bottom: -5px !important;
+  width: 2px !important;
+  background: #e5e7eb !important;
+  display: block !important;
+  visibility: visible !important;
+  z-index: 1 !important;
+}
+
+.timelineIcon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  /* background-color: white; */
+}
+
+.noteIcon svg,
+.activityIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.timelineContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.titleSection {
+  flex: 1;
+}
+
+.title {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.privateLabel {
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.performer {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.department {
+  color: #9ca3af;
+}
+
+.timeSection {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.timestamp {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  cursor: help;
+}
+
+.statusChange {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.oldStatus {
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.newStatus {
+  background: #f0fdf4;
+  color: #16a34a;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.arrow {
+  color: #6b7280;
+  font-weight: bold;
+}
+
+.description {
+  line-height: 1.6;
+  color: #374151;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.loadMoreSection {
+  display: flex;
+  justify-content: center;
+  /* padding: 16px 0; */
+  border-top: 1px solid #e5e7eb;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.loadMoreButton {
+  background: none;
+  color: rgb(174, 28, 63);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+  font-weight: 600;
+}
+
+.loadMoreButton:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.loadMoreButton:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 16px;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  color: #dc2626;
+}
+
+/* FINAL OVERRIDE - Prevent any other component CSS from affecting last item */
+.caseTimeline .timelineList .timelineItem.lastItem,
+.caseTimeline .timelineItem.lastItem {
+  position: relative !important;
+}
+
+.caseTimeline .timelineList .timelineItem.lastItem::before,
+.caseTimeline .timelineList .timelineItem.lastItem::after,
+.caseTimeline .timelineItem.lastItem::before,
+.caseTimeline .timelineItem.lastItem::after,
+.timelineItem.lastItem::before,
+.timelineItem.lastItem::after {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+  background: transparent !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: none !important;
+  opacity: 0 !important;
+}
+
+.retryButton {
+  margin-top: 16px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.retryButton:hover {
+  background: #b91c1c;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+}
+
+/* Custom scrollbar for timeline */
+.timelineList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.timelineList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.timelineList::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.timelineList::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .caseTimeline {
+    padding: 0 16px;
+  }
+
+  .timelineHeader {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px 0;
+  }
+
+  .filters {
+    align-self: stretch;
+    justify-content: stretch;
+  }
+
+  .filters button {
+    flex: 1;
+    text-align: center;
+  }
+
+  .timelineList {
+    padding: 16px 0;
+  }
+
+  .timelineItem {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  /* Reset any conflicting pseudo-elements */
+  .timelineItem::before,
+  .timelineItem::after {
+    display: none !important;
+  }
+
+  .timelineIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .caseTimeline .timelineItem:not(:last-child)::before {
+    left: 16px;
+    top: 36px;
+    bottom: -20px;
+    display: block !important;
+  }
+
+  .contentBody {
+    padding: 8px 12px;
+    margin-top: 6px;
+  }
+
+  .titleSection {
+    margin-bottom: 6px;
+  }
+
+  .loadMoreSection {
+    padding: 12px 0;
+  }
+}

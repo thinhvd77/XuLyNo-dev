@@ -1,0 +1,366 @@
+.tableContainer {
+  width: 100%;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 580px;
+  min-height: 0;
+  border: 1px solid var(--border-color);
+}
+
+.tableWrapper {
+  overflow: auto;
+  max-width: 100%;
+  flex: 1;
+  min-height: 0;
+  max-height: calc(100vh - 150px);
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 800px; /* Đảm bảo table không bị co quá nhỏ */
+}
+
+.dataTable td {
+  font-size: 14px;
+}
+
+.tableHeader {
+  background: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-size: 15px;
+}
+
+.tableHeader:first-child,
+.tableCell:first-child {
+  /* Allow column width to be controlled by inline styles */
+  width: auto;
+}
+
+/* Action column sticky to right */
+.tableHeader:last-child {
+  position: sticky;
+  right: 0;
+  background: #f8f9fa;
+  z-index: 11;
+  text-align: left;
+}
+
+.tableHeader.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.tableHeader.sortable:hover {
+  background: #e9ecef;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sortIcon {
+  opacity: 0.6;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  transition: all 0.2s ease;
+}
+
+.sortIcon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.tableHeader.sortable:hover .sortIcon {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.tableRow {
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.tableRow:hover {
+  background: #f8f9fa;
+}
+
+.tableRow:hover .tableCell:last-child {
+  background: #f8f9fa;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableCell {
+  padding: 10px 12px;
+  vertical-align: middle;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  /* Remove constraining styles to allow column width control */
+}
+
+.tableCell:last-child {
+  border-right: none;
+  position: sticky;
+  right: 0;
+  background: white;
+  z-index: 5;
+  text-align: left;
+  overflow: visible;
+  text-overflow: unset;
+  white-space: nowrap;
+}
+
+.actionButton {
+  background: none;
+  color: rgb(174, 28, 63);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.actionButton:hover {
+  /* background: #c41e17; */
+  text-decoration: underline;
+  transform: translateY(-1px);
+  /* box-shadow: 0 2px 4px rgba(218, 37, 29, 0.2); */
+}
+
+.actionButton:active {
+  transform: translateY(0);
+}
+
+.loadingMessage,
+.emptyMessage {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+  font-style: italic;
+  background: #fff;
+  font-size: 14px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingMessage {
+  color: #007bff;
+}
+
+.dataTable th:nth-child(6),
+.dataTable td:nth-child(6) {
+  max-width: 150px;
+}
+
+.dataTable th:nth-child(7),
+.dataTable td:nth-child(7) {
+  max-width: 150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tableContainer {
+    margin: 10px -15px 0 -15px;
+    border-radius: 0;
+  }
+
+  .dataTable {
+    min-width: 600px; /* Reduce min-width for mobile */
+  }
+
+  .tableCell {
+    padding: 8px 6px;
+    font-size: 12px;
+    max-width: 120px;
+  }
+
+  .tableCell:last-child {
+    max-width: 100px;
+    padding: 8px 4px;
+    min-width: 100px;
+    width: 100px;
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+  }
+
+  .tableHeader {
+    padding: 12px 6px;
+    font-size: 12px;
+  }
+
+  .tableHeader:last-child {
+    padding: 12px 4px;
+    min-width: 100px;
+    max-width: 100px;
+    width: 100px;
+  }
+
+  .actionButton {
+    padding: 6px 8px;
+    font-size: 11px;
+    border-radius: 4px;
+  }
+}
+
+/* Định dạng các loại dữ liệu */
+.currencyCell {
+  text-align: right;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.customerNameCell {
+  white-space: normal !important;
+  word-wrap: break-word;
+  line-height: 1.4;
+  max-width: 300px;
+}
+
+.statusCell {
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Status classes - đồng bộ với MyCases và DirectorDashboard */
+.beingFollowedUp,
+.beingSued,
+.awaitingJudgmentEffect,
+.beingExecuted,
+.proactivelySettled,
+.debtSold,
+.amcHired {
+  color: #ffffff;
+}
+
+.beingFollowedUp {
+  background-color: #1e88e5;
+}
+.beingSued {
+  background-color: #ef6c00;
+}
+.awaitingJudgmentEffect {
+  background-color: #f9a825;
+}
+.beingExecuted {
+  background-color: #c62828;
+}
+.proactivelySettled {
+  background-color: #8e24aa;
+}
+.debtSold {
+  background-color: #607d8b;
+}
+.amcHired {
+  background-color: #388e3c;
+}
+
+/* Legacy status classes for backward compatibility */
+.statusNew {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.statusProcessing {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.statusCompleted {
+  background: #e8f5e8;
+  color: #388e3c;
+}
+
+.statusOverdue {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.statusDefault {
+  background: #f5f5f5;
+  color: #757575;
+}
+
+/* Case Type Badge styles */
+.caseTypeBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.internal,
+.external {
+  color: #fff;
+}
+
+.internal {
+  background-color: #005bac;
+  border: 1px solid #005bac;
+}
+
+.external {
+  background-color: #ffa726;
+  border: 1px solid #ffa726;
+}
+
+.dateCell {
+  color: #6c757d;
+  font-size: 13px;
+}
+
+.typeCell {
+  font-weight: 500;
+}
+
+.officerCell {
+  color: #495057;
+  font-weight: 500;
+}

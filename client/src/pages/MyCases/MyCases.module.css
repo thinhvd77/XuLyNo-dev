@@ -1,0 +1,403 @@
+:root {
+  --primary-color: #da251d;
+  --primary-color-light: #fbe9e7;
+  --secondary-color: #00542b;
+  --secondary-color-light: #e8f5e9;
+  --text-light: #6c757d;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.1);
+  --text-color: #333;
+
+  /* --status-new: #2196f3;
+    --status-inprogress: #ffc107;
+    --status-lawsuit: #da251d;
+    --status-execution: #fb6132;
+    --status-completed: #46f251; */
+
+  --status-being-followed-up: #1e88e5; /* Đang đôn đốc - xanh dương */
+  --status-being-sued: #ef6c00; /* Đang khởi kiện - cam */
+  --status-awaiting-judgment-effect: #f9a825; /* Chờ hiệu lực án - vàng */
+  --status-being-executed: #c62828; /* Đang thi hành án - đỏ */
+  --status-proactively-settled: #8e24aa; /* Chủ động XLTS - tím */
+  --status-debt-sold: #607d8b; /* Bán nợ - xám xanh */
+  --status-amc-hired: #388e3c; /* Thuê AMC XLN - xanh lá */
+}
+
+/* Page Header - đồng bộ với Dashboard */
+.pageHeader {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+.pageHeader h1 {
+  font-size: 25px;
+  font-weight: 900;
+  padding-top: 12px;
+  padding-left: 24px;
+  margin: 0;
+  margin-right: auto;
+  color: var(--text-color);
+}
+
+/* Card wrapper */
+.card {
+  background-color: #fff;
+  padding: 0 24px;
+  border-radius: 8px;
+  /* box-shadow: var(--card-shadow); */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120px); /* Đặt chiều cao cố định để pagination luôn ở dưới */
+}
+
+.filterBar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.searchInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+}
+.filterSelect {
+  padding: 10px 12px;
+  padding-right: 32px; /* Make room for custom arrow */
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: white;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  /* Remove default dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add custom dropdown arrow - matching UserManagement pattern */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px 16px;
+  outline: none;
+}
+
+.filterSelect:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(218, 37, 29, 0.1);
+  /* Change arrow color on hover */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23495057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+.filterSelect:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(218, 37, 29, 0.15);
+  /* Change arrow color on focus */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23DA251D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+}
+
+.tableContainer {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Cho phép table container mở rộng */
+}
+
+.tableWrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0; /* Cho phép flex item co lại khi cần thiết */
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Cố định layout của table */
+}
+.dataTable th,
+.dataTable td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dataTable td {
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+/* Cố định độ rộng các cột */
+.dataTable th:nth-child(1),
+.dataTable td:nth-child(1) {
+  width: 10%; /* Mã Khách hàng */
+  text-align: left;
+}
+
+.dataTable th:nth-child(2),
+.dataTable td:nth-child(2) {
+  width: 25%; /* Tên Khách hàng */
+  white-space: normal; /* Cho phép wrap text cho tên dài */
+  text-align: left;
+}
+
+.dataTable th:nth-child(3),
+.dataTable td:nth-child(3) {
+  width: 8%; /* Loại Case */
+  text-align: center;
+}
+
+.dataTable th:nth-child(4),
+.dataTable td:nth-child(4) {
+  width: 11%; /* Dư nợ */
+  text-align: left;
+}
+
+.dataTable th:nth-child(5),
+.dataTable td:nth-child(5) {
+  width: 11%; /* Trạng thái */
+  text-align: center;
+}
+
+.dataTable th:nth-child(6),
+.dataTable td:nth-child(6) {
+  width: 13%; /* Ngày cập nhật cuối */
+  text-align: center;
+}
+
+.dataTable th:nth-child(7),
+.dataTable td:nth-child(7) {
+  width: 9%; /* Hành động */
+  text-align: center;
+}
+.dataTable thead th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.sortableHeader {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.sortableHeader:hover {
+  background-color: #e9ecef;
+}
+
+.sortableHeader:hover .sortIcon {
+  opacity: 0.8;
+}
+
+.sortableHeader.sorted .sortIcon {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sortIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  opacity: 0.5;
+  min-width: 16px;
+  height: 16px;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+.sortIcon svg {
+  transition: all 0.2s ease;
+}
+/* Xử lý đặc biệt cho cột tên khách hàng - cho phép wrap text */
+.dataTable td:nth-child(2) {
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.4;
+  max-height: 60px;
+  overflow: hidden;
+}
+
+.dataTable tbody tr:hover {
+  background-color: #fbe9e7;
+}
+.dataTable tbody tr:last-child td {
+  border-bottom: none;
+}
+.actionCell a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.actionCell a:hover {
+  background-color: #fbe9e7;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.caseTypeBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.internal {
+  background-color: #005bac;
+  color: #fff;
+  border: 1px solid #005bac;
+}
+
+.external {
+  background-color: #ffa726;
+  color: #fff;
+  border: 1px solid #ffa726;
+}
+
+.beingFollowedUp {
+  background-color: var(--status-being-followed-up);
+  color: #ffffff;
+}
+.beingSued {
+  background-color: var(--status-being-sued);
+  color: #ffffff;
+}
+.awaitingJudgmentEffect {
+  background-color: var(--status-awaiting-judgment-effect);
+  color: #ffffff;
+}
+.beingExecuted {
+  background-color: var(--status-being-executed);
+  color: #ffffff;
+}
+.proactivelySettled {
+  background-color: var(--status-proactively-settled);
+  color: #ffffff;
+}
+.debtSold {
+  background-color: var(--status-debt-sold);
+  color: #ffffff;
+}
+.amcHired {
+  background-color: var(--status-amc-hired);
+  color: #ffffff;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  margin-top: auto; /* Đẩy pagination xuống dưới cùng */
+  flex-shrink: 0; /* Không cho pagination co lại */
+}
+.pageInfo {
+  color: var(--text-light);
+}
+
+.loading,
+.error,
+.noData {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+.error {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Custom Select Dropdown with Arrow */
+.customSelectWrapper {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  min-width: 150px;
+}
+
+.customSelectWrapper::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #6c757d;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.customSelectWrapper:hover::after {
+  border-top-color: var(--primary-color);
+}
+
+.customSelectWrapper:focus-within::after {
+  border-top-color: var(--primary-color);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding-right: 24px;
+}
+.backLink:hover {
+  text-decoration: underline;
+}

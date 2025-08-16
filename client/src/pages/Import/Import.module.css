@@ -1,0 +1,794 @@
+:root {
+  --primary-color: #da251d;
+  --primary-color-light: #fbe9e7;
+  --secondary-color: #00542b;
+  --secondary-color-light: #e8f5e9;
+  --text-light: #6c757d;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.1);
+  --text-color: #333;
+}
+
+/* Page Header - đồng bộ với Dashboard */
+.pageHeader {
+  margin: 24px 0;
+}
+.pageHeader h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color);
+}
+.pageHeader p {
+  color: var(--text-light);
+  margin: 4px 0 0 0;
+}
+
+/* Card wrapper */
+.card {
+  background-color: var(--card-bg);
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  /* box-shadow: var(--card-shadow); */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* --- CSS MỚI CHO GIAO DIỆN TAB --- */
+.tabNav {
+  display: flex;
+  border-bottom: 1px solid #dee2e6;
+  margin: -24px 0px 24px 0px;
+}
+.tabButton {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6c757d;
+  border: none;
+  background: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px; /* Để border đè lên border của nav */
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.tabButton:hover {
+  color: #333;
+}
+.tabButton.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+/* Không cần CSS riêng cho tabContent */
+/* Upload area styling */
+.dropzone {
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    background-color 0.2s;
+}
+.dropzone:hover,
+.dropzone.dragActive {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color-light);
+}
+.uploadIcon {
+  width: 48px;
+  height: 48px;
+  color: var(--primary-color);
+  margin: 0 auto 16px auto;
+}
+.fileTypeHint {
+  color: var(--text-light);
+  font-size: 14px;
+  display: block;
+  margin-top: 8px;
+}
+
+.additionalHint {
+  color: var(--text-light);
+  font-size: 14px;
+  display: block;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+/* File list styling */
+.fileList {
+  margin-top: 24px;
+}
+.fileList h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: var(--text-color);
+}
+.fileList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.fileListItem {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  padding: 12px;
+  transition: border-color 0.3s;
+}
+.fileListItem.success {
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color-light);
+}
+.fileListItem.error {
+  border-color: var(--primary-color);
+  background-color: var(--primary-color-light);
+}
+
+.fileListItem.critical {
+  border-color: #dc3545;
+  background-color: #f8d7da;
+  border-width: 2px;
+}
+
+.fileListItem.corruption {
+  border-color: #fd7e14;
+  background-color: #fff3e0;
+  border-width: 2px;
+}
+
+.fileListItem.warning {
+  border-color: #ffc107;
+  background-color: #fff3cd;
+}
+.fileListItem.uploading {
+  background-color: #f8f9fa;
+}
+.fileDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+.fileIcon {
+  width: 20px;
+  height: 20px;
+  color: #6c757d;
+  flex-shrink: 0;
+}
+.fileName {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fileSize {
+  font-size: 12px;
+  color: #6c757d;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+.fileStatus {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.statusMessage {
+  font-weight: 500;
+}
+.success .statusMessage {
+  color: #00542b;
+}
+.error .statusMessage {
+  color: #da251d;
+}
+
+.critical .statusMessage {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.corruption .statusMessage {
+  color: #fd7e14;
+  font-weight: 600;
+}
+
+.warning .statusMessage {
+  color: #856404;
+}
+.waiting .statusMessage {
+  color: #6c757d;
+  font-style: italic;
+}
+.uploading .statusMessage {
+  color: #0d6efd;
+}
+.removeBtn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: #6c757d;
+  padding: 0 4px;
+}
+.removeBtn:hover {
+  color: #da251d;
+}
+.removeBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.resultSummary {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #d0e4d2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 16px;
+}
+.resultItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.resultItem span {
+  color: #6c757d;
+}
+.resultItem strong {
+  font-weight: 600;
+}
+.created {
+  color: #198754;
+}
+.updated {
+  color: #0d6efd;
+}
+.actions {
+  margin-top: 24px;
+  text-align: right;
+}
+.actions button {
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #da251d;
+  transition: background-color 0.2s;
+}
+.actions button:hover:not(:disabled) {
+  background-color: #c32018;
+}
+.actions button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Error details styling */
+.errorDetails {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.errorMessage {
+  color: #e53e3e;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.errorType {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.errorType.template {
+  background-color: #fed7d7;
+  color: #c53030;
+}
+
+.errorType.validation {
+  background-color: #feebc8;
+  color: #c05621;
+}
+
+.errorType.corruption {
+  background-color: #fff3e0;
+  color: #fd7e14;
+}
+
+.errorType.system {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.errorHint {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #ebf8ff;
+  border-left: 3px solid #3182ce;
+  font-size: 13px;
+  color: #2c5282;
+}
+
+.batchErrorSummary {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #fed7d7;
+  background-color: #fffaf0;
+}
+
+.batchErrorSummary h4 {
+  margin: 0 0 8px 0;
+  color: #c53030;
+  font-size: 16px;
+}
+
+.batchErrorSummary ul {
+  margin: 8px 0 0 16px;
+  color: #744210;
+}
+
+/* Template hint styling */
+.templateHint {
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+  border: 2px solid #c4b5fd;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #5b21b6;
+}
+
+.templateHint strong {
+  color: #5b21b6;
+}
+
+.templateHint code {
+  background-color: #f3f4f6;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  margin: 0 2px;
+}
+
+/* Enhanced Error Details Styles */
+.errorDetails {
+  margin-top: 12px;
+  padding: 16px;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  position: relative;
+}
+
+.errorType {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 8px;
+  letter-spacing: 0.025em;
+}
+
+.errorType.template {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fbbf24;
+}
+
+.errorType.validation {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #f87171;
+}
+
+.errorType.corruption {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+  border: 1px solid #a78bfa;
+}
+
+.errorType.system {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #94a3b8;
+}
+
+.errorMessage {
+  color: #7f1d1d;
+  font-size: 14px;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.errorHint {
+  background-color: #fffbeb;
+  border: 1px solid #fde047;
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 12px;
+  color: #92400e;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.btnShowDetails {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
+}
+
+.btnShowDetails:hover {
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
+  transform: translateY(-1px);
+}
+
+.btnShowDetails:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
+}
+
+/* ErrorModal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  background: white;
+  border-radius: 16px;
+  padding: 0;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modalHeader {
+  padding: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: white;
+  position: relative;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modalSubtitle {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.modalBody {
+  padding: 24px;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+
+.errorSummary {
+  background-color: #fef2f2;
+  border: 2px solid #fca5a5;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.errorIcon {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: #dc2626;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.errorMainText {
+  margin: 8px 0 0 0;
+  color: #7f1d1d;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.requirementTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.requirementTable th {
+  background-color: #f9fafb;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.requirementTable td {
+  padding: 12px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.requirementTable tr:last-child td {
+  border-bottom: none;
+}
+
+.requirementTable tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.columnCode {
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  background-color: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.hintBox {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde047 100%);
+  border: 2px solid #fbbf24;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  position: relative;
+}
+
+.hintBox::before {
+  content: "💡";
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  background: #f59e0b;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.hintTitle {
+  font-weight: 600;
+  color: #92400e;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.hintText {
+  color: #b45309;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+.solutionList {
+  margin: 0;
+  padding-left: 20px;
+  color: #374151;
+}
+
+.solutionList li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.solutionList li strong {
+  color: #1f2937;
+}
+
+.templateSwitch {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+  margin-top: 16px;
+}
+
+.templateSwitch:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 6px 8px -1px rgba(59, 130, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Animation for modal elements */
+.modalContent * {
+  animation: slideInFromBottom 0.4s ease-out backwards;
+}
+
+.modalContent .modalHeader {
+  animation-delay: 0.1s;
+}
+
+.modalContent .errorSummary {
+  animation-delay: 0.2s;
+}
+
+.modalContent .section {
+  animation-delay: 0.3s;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .modalContent {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .modalHeader {
+    padding: 20px;
+  }
+  
+  .modalTitle {
+    font-size: 18px;
+  }
+  
+  .modalBody {
+    padding: 20px;
+  }
+  
+  .requirementTable {
+    font-size: 12px;
+  }
+  
+  .requirementTable th,
+  .requirementTable td {
+    padding: 8px;
+  }
+}

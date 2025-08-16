@@ -1,0 +1,193 @@
+/* Document Uploader Styles */
+.uploaderContainer {
+  padding: 10px 0;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+.formControl {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.dropzone {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  background-color: #fafafa;
+}
+
+.dropzone:hover,
+.dragActive {
+  border-color: #9f0d0d;
+  background-color: #faf1f1;
+}
+
+.dropzone p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.fileList {
+  margin-top: 20px;
+}
+
+.fileListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 12px; */
+}
+
+.fileList h4 {
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 16px;
+}
+
+.fileList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+  max-height: 290px;
+  overflow-y: auto;
+}
+
+.fileQueueItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background-color: #fff;
+}
+
+.fileQueueItem.success {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+.fileQueueItem.error {
+  border-color: #dc3545;
+  background-color: #fff8f8;
+}
+
+.fileQueueItem.waiting {
+  border-color: #6c757d;
+  background-color: #f8f9fa;
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.fileTypeBadge {
+  background-color: #007bff;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.fileName {
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+  word-break: break-word;
+}
+
+.fileSize {
+  color: #666;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.fileStatus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusText {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.success .statusText {
+  color: #28a745;
+}
+
+.error .statusText {
+  color: #dc3545;
+}
+
+.waiting .statusText {
+  color: #6c757d;
+}
+
+.removeDoc {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeDoc:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.uploadBTN {
+  background-color: white;
+  color: rgb(174, 28, 63);
+  border: 1px solid rgb(174, 28, 63);
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease; */
+  width: 20%;
+}
+
+.uploadBTN:hover:not(:disabled) {
+  background-color: rgb(174, 28, 63);
+  color: white;
+}
+
+.uploadBTN:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  opacity: 0.6;
+}

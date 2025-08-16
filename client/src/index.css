@@ -1,0 +1,36 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'); */
+
+:root {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Giữ lại các cài đặt màu sắc và font chữ toàn cục */
+  color: #213547;
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- FIX: Áp dụng box-sizing cho tất cả các element --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fff; /* Đảm bảo body có màu nền đúng */
+}
+
+/* --- FIX: Gỡ bỏ các style layout khỏi #root ---
+  #root bây giờ chỉ là một container đơn giản, cho phép các component con (như Layout)
+  toàn quyền kiểm soát layout của chính chúng.
+*/
+#root {
+  min-height: 100vh;
+}

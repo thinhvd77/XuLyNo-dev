@@ -1,0 +1,166 @@
+[
+  {
+    "name": "view_own_cases",
+    "description": "Xem hồ sơ do mình quản lý"
+  },
+  {
+    "name": "edit_own_cases",
+    "description": "Chỉnh sửa hồ sơ do mình quản lý"
+  },
+  {
+    "name": "update_own_case_status",
+    "description": "Cập nhật trạng thái hồ sơ do mình quản lý"
+  },
+  {
+    "name": "add_case_notes",
+    "description": "Thêm ghi chú cho hồ sơ do mình quản lý"
+  },
+  {
+    "name": "upload_case_documents",
+    "description": "Tải tài liệu lên hồ sơ do mình quản lý"
+  },
+  {
+    "name": "delete_case_documents",
+    "description": "Xóa tài liệu khỏi hồ sơ do mình quản lý"
+  },
+  {
+    "name": "view_department_cases",
+    "description": "Xem tất cả hồ sơ trong phòng ban"
+  },
+  {
+    "name": "edit_department_cases",
+    "description": "Chỉnh sửa hồ sơ trong phòng ban"
+  },
+  {
+    "name": "view_all_cases",
+    "description": "Xem tất cả hồ sơ trong hệ thống"
+  },
+  {
+    "name": "edit_all_cases",
+    "description": "Chỉnh sửa tất cả hồ sơ trong hệ thống"
+  },
+  {
+    "name": "create_delegation",
+    "description": "Tạo ủy quyền cho hồ sơ"
+  },
+  {
+    "name": "view_delegations",
+    "description": "Xem danh sách ủy quyền"
+  },
+  {
+    "name": "manage_delegations",
+    "description": "Quản lý ủy quyền (tạo, sửa, xóa)"
+  },
+  {
+    "name": "access_employee_dashboard",
+    "description": "Truy cập trang tổng quan của nhân viên"
+  },
+  {
+    "name": "access_manager_dashboard",
+    "description": "Truy cập trang tổng quan của trưởng phòng"
+  },
+  {
+    "name": "access_director_dashboard",
+    "description": "Truy cập trang tổng quan của ban giám đốc"
+  },
+  {
+    "name": "import_internal_cases",
+    "description": "Nhập hồ sơ nội bộ từ file Excel"
+  },
+  {
+    "name": "import_external_cases",
+    "description": "Nhập hồ sơ bên ngoài từ file Excel"
+  },
+  {
+    "name": "export_case_data",
+    "description": "Xuất dữ liệu hồ sơ"
+  },
+  {
+    "name": "export_department_data",
+    "description": "Xuất dữ liệu phòng ban"
+  },
+  {
+    "name": "export_all_data",
+    "description": "Xuất tất cả dữ liệu hệ thống"
+  },
+  {
+    "name": "generate_reports",
+    "description": "Tạo báo cáo tổng hợp"
+  },
+  {
+    "name": "view_reports",
+    "description": "Xem báo cáo"
+  },
+  {
+    "name": "export_reports",
+    "description": "Xuất báo cáo tổng hợp"
+  },
+  {
+    "name": "view_users",
+    "description": "Xem danh sách người dùng"
+  },
+  {
+    "name": "create_users",
+    "description": "Tạo người dùng mới"
+  },
+  {
+    "name": "edit_users",
+    "description": "Chỉnh sửa thông tin người dùng"
+  },
+  {
+    "name": "delete_users",
+    "description": "Xóa người dùng"
+  },
+  {
+    "name": "manage_users",
+    "description": "Quản lý người dùng (thêm, sửa, xóa)"
+  },
+  {
+    "name": "view_permissions",
+    "description": "Xem danh sách quyền hạn"
+  },
+  {
+    "name": "assign_permissions",
+    "description": "Phân quyền cho người dùng"
+  },
+  {
+    "name": "revoke_permissions",
+    "description": "Thu hồi quyền của người dùng"
+  },
+  {
+    "name": "manage_permissions",
+    "description": "Phân quyền cho người dùng"
+  },
+  {
+    "name": "view_audit_logs",
+    "description": "Xem nhật ký hoạt động"
+  },
+  {
+    "name": "export_audit_logs",
+    "description": "Xuất nhật ký hoạt động"
+  },
+  {
+    "name": "view_system_stats",
+    "description": "Xem thống kê hệ thống"
+  },
+  {
+    "name": "manage_system_settings",
+    "description": "Quản lý cài đặt hệ thống"
+  },
+  {
+    "name": "access_file_structure",
+    "description": "Truy cập cấu trúc thư mục file"
+  },
+  {
+    "name": "view_storage_stats",
+    "description": "Xem thống kê lưu trữ"
+  },
+  {
+    "name": "download_documents",
+    "description": "Tải xuống tài liệu"
+  },
+  {
+    "name": "preview_documents",
+    "description": "Xem trước tài liệu"
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "name": "view_own_cases",
+    "description": "Xem hồ sơ do mình quản lý",
+    "category": "case_management"
+  },
+  {
+    "name": "edit_own_cases",
+    "description": "Chỉnh sửa hồ sơ do mình quản lý",
+    "category": "case_management"
+  },
+  {
+    "name": "delete_own_cases",
+    "description": "Xóa hồ sơ do mình quản lý",
+    "category": "case_management"
+  },
+  {
+    "name": "view_department_cases",
+    "description": "Xem tất cả hồ sơ trong phòng ban",
+    "category": "case_management"
+  },
+  {
+    "name": "edit_department_cases",
+    "description": "Chỉnh sửa tất cả hồ sơ trong phòng ban",
+    "category": "case_management"
+  },
+  {
+    "name": "view_all_cases",
+    "description": "Xem tất cả hồ sơ trong hệ thống",
+    "category": "case_management"
+  },
+  {
+    "name": "add_case_note",
+    "description": "Thêm ghi chú vào hồ sơ",
+    "category": "case_notes"
+  },
+  {
+    "name": "view_case_notes",
+    "description": "Xem ghi chú của hồ sơ",
+    "category": "case_notes"
+  },
+  {
+    "name": "edit_case_notes",
+    "description": "Chỉnh sửa ghi chú hồ sơ",
+    "category": "case_notes"
+  },
+  {
+    "name": "delete_case_notes",
+    "description": "Xóa ghi chú hồ sơ",
+    "category": "case_notes"
+  },
+  {
+    "name": "view_case_timeline",
+    "description": "Xem lịch sử hoạt động của hồ sơ",
+    "category": "case_timeline"
+  },
+  {
+    "name": "upload_documents",
+    "description": "Tải lên tài liệu cho hồ sơ",
+    "category": "documents"
+  },
+  {
+    "name": "view_documents",
+    "description": "Xem tài liệu của hồ sơ",
+    "category": "documents"
+  },
+  {
+    "name": "download_documents",
+    "description": "Tải xuống tài liệu của hồ sơ",
+    "category": "documents"
+  },
+  {
+    "name": "delete_documents",
+    "description": "Xóa tài liệu của hồ sơ",
+    "category": "documents"
+  },
+  {
+    "name": "create_delegation",
+    "description": "Tạo ủy quyền xử lý hồ sơ",
+    "category": "delegation"
+  },
+  {
+    "name": "view_delegations",
+    "description": "Xem danh sách ủy quyền",
+    "category": "delegation"
+  },
+  {
+    "name": "manage_delegations",
+    "description": "Quản lý ủy quyền (duyệt, từ chối, hủy)",
+    "category": "delegation"
+  },
+  {
+    "name": "access_employee_dashboard",
+    "description": "Truy cập trang tổng quan của nhân viên",
+    "category": "dashboard"
+  },
+  {
+    "name": "access_manager_dashboard",
+    "description": "Truy cập trang tổng quan của trưởng phòng",
+    "category": "dashboard"
+  },
+  {
+    "name": "access_director_dashboard",
+    "description": "Truy cập trang tổng quan của ban giám đốc",
+    "category": "dashboard"
+  },
+  {
+    "name": "import_data",
+    "description": "Thực hiện nhập dữ liệu từ file Excel",
+    "category": "data_management"
+  },
+  {
+    "name": "export_report",
+    "description": "Xuất báo cáo tổng hợp",
+    "category": "reports"
+  },
+  {
+    "name": "view_reports",
+    "description": "Xem báo cáo",
+    "category": "reports"
+  },
+  {
+    "name": "view_department_reports",
+    "description": "Xem báo cáo cấp phòng ban",
+    "category": "reports"
+  },
+  {
+    "name": "view_all_reports",
+    "description": "Xem tất cả báo cáo trong hệ thống",
+    "category": "reports"
+  },
+  {
+    "name": "manage_users",
+    "description": "Quản lý người dùng (thêm, sửa, xóa)",
+    "category": "user_management"
+  },
+  {
+    "name": "view_users",
+    "description": "Xem danh sách người dùng",
+    "category": "user_management"
+  },
+  {
+    "name": "activate_deactivate_users",
+    "description": "Kích hoạt/vô hiệu hóa người dùng",
+    "category": "user_management"
+  },
+  {
+    "name": "reset_user_password",
+    "description": "Đặt lại mật khẩu người dùng",
+    "category": "user_management"
+  },
+  {
+    "name": "manage_permissions",
+    "description": "Phân quyền cho người dùng",
+    "category": "permission_management"
+  },
+  {
+    "name": "view_permissions",
+    "description": "Xem danh sách quyền hạn",
+    "category": "permission_management"
+  },
+  {
+    "name": "assign_permissions",
+    "description": "Gán quyền cho người dùng",
+    "category": "permission_management"
+  },
+  {
+    "name": "view_activity_logs",
+    "description": "Xem nhật ký hoạt động",
+    "category": "system"
+  },
+  {
+    "name": "view_system_logs",
+    "description": "Xem nhật ký hệ thống",
+    "category": "system"
+  },
+  {
+    "name": "change_own_password",
+    "description": "Thay đổi mật khẩu của mình",
+    "category": "account"
+  },
+  {
+    "name": "view_own_profile",
+    "description": "Xem thông tin cá nhân",
+    "category": "account"
+  },
+  {
+    "name": "edit_own_profile",
+    "description": "Chỉnh sửa thông tin cá nhân",
+    "category": "account"
+  }
+]

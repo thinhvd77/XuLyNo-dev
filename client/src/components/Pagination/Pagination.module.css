@@ -1,0 +1,29 @@
+.pageNav {
+  display: flex;
+  gap: 4px;
+}
+
+.pageNav button {
+  padding: 8px 12px;
+  border: 1px solid #dee2e6;
+  background-color: white;
+  cursor: pointer;
+  margin-left: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.pageNav button:hover:not(:disabled) {
+  background-color: #f1f1f1;
+}
+
+.pageNav button.active {
+  background-color: #da251d;
+  color: white;
+  border-color: #da251d;
+}
+
+.pageNav button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
