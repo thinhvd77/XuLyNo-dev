@@ -65,6 +65,16 @@ const normalizeCaseType = (caseType) => {
   return CASE_TYPE_MAPPING[caseType] || caseType;
 };
 
+/**
+ * Get status options for filters
+ */
+const getStatusOptions = () => {
+  return Object.values(CASE_STATUS).map(status => ({
+    value: status,
+    label: status
+  }));
+};
+
 module.exports = {
   CASE_STATUS,
   CASE_TYPE,
@@ -72,4 +82,5 @@ module.exports = {
   CASE_TYPE_MAPPING,
   normalizeStatus,
   normalizeCaseType,
+  getStatusOptions,
 };

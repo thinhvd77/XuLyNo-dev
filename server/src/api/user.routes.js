@@ -42,7 +42,7 @@ router.get(
   '/employees-for-filter',
   protect, // 1. Yêu cầu đăng nhập
   authorizeByAnyPermissionOrRole(
-    ['view_users', 'manage_users', 'access_director_dashboard'],
+    ['view_users', 'manage_users', 'access_director_dashboard', 'view_department_cases', 'export_department_data', 'export_department_cases'],
     'director',
     'deputy_director',
     'administrator',

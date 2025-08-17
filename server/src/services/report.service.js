@@ -3,6 +3,7 @@ const { normalizeStatus, normalizeCaseType } = require('../constants/caseConstan
 const XLSX = require('xlsx');
 const path = require('path');
 const fs = require('fs');
+const permissionService = require('./permission.service');
 
 /**
  * Build the base query for report data
@@ -10,7 +11,7 @@ const fs = require('fs');
  * @param {Object} user - Authenticated user for scoping
  * @returns {QueryBuilder} TypeORM query builder
  */
-function buildReportQuery(filters, user) {
+async function buildReportQuery(filters, user) {
   const { status, caseType, branch, department, employeeCode, startDate, endDate } = filters;
 
   const caseRepository = AppDataSource.getRepository('DebtCase');
@@ -102,26 +103,46 @@ function buildReportQuery(filters, user) {
     query = query.andWhere('debt_cases.created_date <= :endDate', { endDate });
   }
 
-  // Apply dynamic data scope based on user role/department (backend scoping)
+  // Apply dynamic data scope based on user permissions
   if (user) {
+    // Get user permissions from database
+    const userPermissions = await permissionService.getUserPermissions(user);
+    
     // Default-full-access departments
     const deptDefault = ['KH&QLRR', 'KH&XLRR'];
     const hasDefaultAccess = user.role === 'administrator' || deptDefault.includes(user.dept) || user.dept === 'KTGSNB';
 
     if (!hasDefaultAccess) {
-      const isManager = user.role === 'manager';
-      const isDeputyManager = user.role === 'deputy_manager';
-
-      if (isManager && user.dept === 'KHDN') {
-        // Manager in KHDN: full access
-      } else if (isManager || isDeputyManager) {
-        // All other managers/deputies: department scope
+      // Check permissions first, then fall back to role-based logic
+      if (userPermissions.export_all_data || userPermissions.view_all_cases) {
+        // Has permission to export/view all data - no additional filters needed
+      } else if (userPermissions.export_department_data || userPermissions.view_department_cases) {
+        // Has permission to export/view department data
         query = query.andWhere('user.dept = :scopeDept', { scopeDept: user.dept });
-      } else {
-        // Default: own records only
+        
+        // Note: Do NOT add branch filter for department permission
+        // Users with department permission should see all cases in their department regardless of branch
+      } else if (userPermissions.export_case_data || userPermissions.view_own_cases) {
+        // Has permission to export/view own cases only
         query = query.andWhere('debt_cases.assigned_employee_code = :scopeEmployee', {
           scopeEmployee: user.employee_code,
         });
+      } else {
+        // Fall back to role-based logic for backward compatibility
+        const isManager = user.role === 'manager';
+        const isDeputyManager = user.role === 'deputy_manager';
+
+        if (isManager && user.dept === 'KHDN') {
+          // Manager in KHDN: full access
+        } else if (isManager || isDeputyManager) {
+          // All other managers/deputies: department scope
+          query = query.andWhere('user.dept = :scopeDept', { scopeDept: user.dept });
+        } else {
+          // Default: own records only
+          query = query.andWhere('debt_cases.assigned_employee_code = :scopeEmployee', {
+            scopeEmployee: user.employee_code,
+          });
+        }
       }
     }
   }
@@ -136,7 +157,7 @@ function buildReportQuery(filters, user) {
  */
 async function getReportData(filters, user) {
   try {
-    const query = buildReportQuery(filters, user);
+    const query = await buildReportQuery(filters, user);
     const reportData = await query.getRawMany();
 
     // Transform data to Vietnamese
@@ -221,8 +242,136 @@ async function generateSummaryReportFile(filters, user) {
   return { filePath, fileName, rowCount: excelData.length };
 }
 
+/**
+ * Get filter options for report
+ * @param {Object} user - User object for scoping
+ * @returns {Promise<Object>} Available filter options
+ */
+async function getFilterOptions(user) {
+  try {
+    // Get status options from case constants
+    const { getStatusOptions } = require('../constants/caseConstants');
+    const statuses = getStatusOptions();
+    
+    // Get branches
+    const userRepository = AppDataSource.getRepository('User');
+    const branchQuery = userRepository.createQueryBuilder('user')
+      .select('DISTINCT user.branch_code', 'branch_code')
+      .addSelect('user.branch_code', 'label')
+      .where('user.branch_code IS NOT NULL')
+      .orderBy('user.branch_code');
+    
+    const branchResults = await branchQuery.getRawMany();
+    const branches = branchResults.map(b => ({
+      value: b.branch_code,
+      label: b.branch_code
+    }));
+    
+    // Get departments
+    const deptQuery = userRepository.createQueryBuilder('user')
+      .select('DISTINCT user.dept', 'dept')
+      .addSelect('user.dept', 'label')
+      .where('user.dept IS NOT NULL')
+      .orderBy('user.dept');
+    
+    const deptResults = await deptQuery.getRawMany();
+    const departments = deptResults.map(d => ({
+      value: d.dept,
+      label: d.dept
+    }));
+    
+    // Get employees (scoped by user permissions)
+    let employeeQuery = userRepository.createQueryBuilder('user')
+      .select(['user.employee_code', 'user.fullname'])
+      .where('user.employee_code IS NOT NULL')
+      .orderBy('user.fullname');
+    
+    // Apply user-based scoping if needed
+    const userPermissions = await require('./permission.service').getUserPermissions(user);
+    if (!userPermissions.view_all_cases && !userPermissions.view_department_cases) {
+      // Only show own cases for regular employees
+      employeeQuery.andWhere('user.employee_code = :employeeCode', { 
+        employeeCode: user.employee_code 
+      });
+    } else if (userPermissions.view_department_cases && !userPermissions.view_all_cases) {
+      // Show department employees for managers
+      employeeQuery.andWhere('user.dept = :dept', { dept: user.dept });
+    }
+    
+    const employeeResults = await employeeQuery.getMany();
+    const employees = employeeResults.map(e => ({
+      value: e.employee_code,
+      label: `${e.fullname} (${e.employee_code})`
+    }));
+    
+    return {
+      statuses,
+      branches,
+      departments,
+      employees
+    };
+  } catch (error) {
+    console.error('Error fetching filter options:', error);
+    return {
+      statuses: [],
+      branches: [],
+      departments: [],
+      employees: []
+    };
+  }
+}
+
+/**
+ * Get employees by branch
+ * @param {string} branch - Branch code
+ * @param {Object} user - User object for scoping
+ * @returns {Promise<Array>} List of employees
+ */
+async function getEmployeesByBranch(branch, user) {
+  if (!branch) return [];
+  
+  const userRepository = AppDataSource.getRepository('User');
+  const employees = await userRepository.find({
+    where: { branch_code: branch },
+    select: ['employee_code', 'fullname']
+  });
+  
+  return employees;
+}
+
+/**
+ * Generate latest date report
+ * @param {Object} filters - Filter parameters
+ * @param {Object} user - User object for scoping
+ * @returns {Promise<Object>} File path and name
+ */
+async function generateLatestDateReport(filters, user) {
+  // Basic implementation - generate a simple report
+  const reportData = await getReportData(filters, user);
+  
+  const wb = XLSX.utils.book_new();
+  const ws = XLSX.utils.json_to_sheet(reportData);
+  XLSX.utils.book_append_sheet(wb, ws, 'Report');
+  
+  const fileName = `latest_date_report_${Date.now()}.xlsx`;
+  const filePath = path.join(__dirname, '../../uploads', fileName);
+  
+  // Ensure uploads directory exists
+  const uploadsDir = path.dirname(filePath);
+  if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+  }
+  
+  XLSX.writeFile(wb, filePath);
+  
+  return { filePath, fileName };
+}
+
 module.exports = {
   buildReportQuery,
   getReportData,
   generateSummaryReportFile,
+  getFilterOptions,
+  getEmployeesByBranch,
+  generateLatestDateReport,
 };

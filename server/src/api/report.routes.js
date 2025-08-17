@@ -23,7 +23,7 @@ router.get('/filters', enforceReportScope, reportController.getFilterOptions);
 router.get('/employees-by-branch', enforceReportScope, reportController.getEmployeesByBranch);
 
 // GET /api/report/can-export - Kiểm tra quyền xuất báo cáo (cho client ẩn/hiện menu)
-router.get('/can-export', (req, res) => reportController.getExportPermission(req, res));
+router.get('/can-export', reportController.getExportPermission);
 
 // Admin-only endpoints to manage export whitelist
 router.get('/export-whitelist', authorize('administrator'), reportController.getExportWhitelist);

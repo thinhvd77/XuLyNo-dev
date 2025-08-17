@@ -294,27 +294,54 @@ exports.getManagedOfficers = asyncHandler(async (req, res) => {
  */
 exports.getEmployeesForFilter = asyncHandler(async (req, res) => {
   try {
-    if (!req.user || !req.user.branch_code) {
-      throw new ValidationError('User branch information not available');
+    const user = req.user;
+    if (!user) {
+      throw new ValidationError('User information not available');
     }
-
-    // Extract director's branch code from authenticated user
-    const directorBranchCode = req.user.branch_code;
 
     // Extract query parameters for filtering
     const { branchCode, departmentCode } = req.query;
 
-    logger.info('Fetching employees for filter with branch-based access control', {
-      director: req.user.employee_code,
-      directorBranch: directorBranchCode,
+    // Get user permissions
+    const permissionService = require('../services/permission.service');
+    const userPermissions = await permissionService.getUserPermissions(user);
+
+    let scopeBranch = null;
+    let scopeDepartment = null;
+
+    // Determine scope based on user permissions and role
+    if (userPermissions.view_all_cases || userPermissions.export_all_data || user.role === 'administrator') {
+      // Full access - no scoping needed
+    } else if (userPermissions.view_department_cases || userPermissions.export_department_data || userPermissions.export_department_cases) {
+      // Department access - scope to user's department
+      scopeDepartment = user.dept;
+    } else if (user.role === 'director' || user.role === 'deputy_director') {
+      // Directors: use branch-based logic
+      scopeBranch = user.branch_code;
+    } else if (user.role === 'manager' || user.role === 'deputy_manager') {
+      // Managers: department scope
+      scopeDepartment = user.dept;
+    } else {
+      // Default: own records only (but this shouldn't happen for this endpoint)
+      throw new ValidationError('Insufficient permissions to access employee list');
+    }
+
+    logger.info('Fetching employees for filter with permission-based access control', {
+      user: user.employee_code,
+      role: user.role,
+      userBranch: user.branch_code,
+      userDept: user.dept,
+      scopeBranch,
+      scopeDepartment,
       selectedBranch: branchCode,
       selectedDepartment: departmentCode,
     });
 
     const employees = await userService.getEmployeesForFilter(
-      directorBranchCode,
+      scopeBranch,
       branchCode,
       departmentCode,
+      scopeDepartment,
     );
 
     if (!Array.isArray(employees)) {
@@ -323,12 +350,12 @@ exports.getEmployeesForFilter = asyncHandler(async (req, res) => {
 
     // Log the filtering result for audit purposes
     logger.info(`Employee filter applied successfully`, {
-      director: req.user.employee_code,
-      directorBranch: directorBranchCode,
+      user: user.employee_code,
+      scopeBranch,
+      scopeDepartment,
       selectedBranch: branchCode,
       selectedDepartment: departmentCode,
       employeesReturned: employees.length,
-      isUnrestricted: directorBranchCode === '6421',
     });
 
     res.status(200).json({
@@ -336,16 +363,19 @@ exports.getEmployeesForFilter = asyncHandler(async (req, res) => {
       employees,
       metadata: {
         totalEmployees: employees.length,
-        branchFilter: branchCode || (directorBranchCode !== '6421' ? directorBranchCode : null),
-        departmentFilter: departmentCode || null,
-        isUnrestricted: directorBranchCode === '6421',
+        branchFilter: branchCode || scopeBranch,
+        departmentFilter: departmentCode || scopeDepartment,
+        scopeBranch,
+        scopeDepartment,
       },
     });
   } catch (error) {
     logger.error('Error in getEmployeesForFilter:', {
       error: error.message,
       user: req.user?.employee_code,
+      role: req.user?.role,
       branch: req.user?.branch_code,
+      dept: req.user?.dept,
       selectedBranch: req.query?.branchCode,
       selectedDepartment: req.query?.departmentCode,
     });

@@ -50,20 +50,32 @@ exports.authorizeReportExport = (req, res, next) => {
 
 /**
  * Scope enforcement for report queries:
- * If user is role 'employee', force employeeCode filter to their own code.
+ * Only apply employee scoping if user doesn't have broader permissions
  */
-exports.enforceReportScope = (req, res, next) => {
+exports.enforceReportScope = async (req, res, next) => {
   try {
     const user = req.user;
     if (user && user.role === 'employee') {
-      // Force scoping to the logged-in employee
-      req.query = {
-        ...req.query,
-        employeeCode: user.employee_code,
-      };
+      // Check if user has broader permissions before enforcing scope
+      const permissionService = require('../services/permission.service');
+      const userPermissions = await permissionService.getUserPermissions(user);
+      
+      // Only enforce employee scope if user doesn't have department or all-case permissions
+      if (!userPermissions.view_department_cases && 
+          !userPermissions.view_all_cases && 
+          !userPermissions.export_department_data && 
+          !userPermissions.export_all_data &&
+          !userPermissions.export_department_cases &&
+          !userPermissions.export_all_cases) {
+        // Force scoping to the logged-in employee
+        req.query = {
+          ...req.query,
+          employeeCode: user.employee_code,
+        };
+      }
     }
     next();
-  } catch (_) {
+  } catch (error) {
     // Fail-open to avoid breaking requests for non-employee roles
     next();
   }
@@ -74,24 +86,27 @@ exports.enforceReportScope = (req, res, next) => {
  * Matches the same logic as authorizeReportExport
  */
 exports.isReportExportAllowed = (user) => {
-  if (!user) return false;
-  const allowedRoles = (process.env.REPORT_EXPORT_ALLOWED_ROLES || 'manager,director,administrator')
-    .split(',')
-    .map((s) => s.trim())
-    .filter(Boolean);
-  const allowedEmployees = (process.env.REPORT_EXPORT_ALLOWED_EMPLOYEES || '')
-    .split(',')
-    .map((s) => s.trim())
-    .filter(Boolean);
-  const fileWhitelist = reportPermissionService.getAllowedEmployees();
-  const isFileWhitelisted = Array.isArray(fileWhitelist)
-    ? fileWhitelist.includes(user.employee_code)
-    : false;
-  return (
-    allowedRoles.includes(user.role) ||
-    allowedEmployees.includes(user.employee_code) ||
-    isFileWhitelisted
-  );
+  // Default access for certain roles/departments
+  if (
+    user.role === 'administrator' ||
+    user.dept === 'KH&QLRR'
+  ) {
+    return true;
+  }
+  
+  // Check for new permissions from DB
+  if (user.permissions && user.permissions._db) {
+    if (
+      user.permissions._db.export_all_data || 
+      user.permissions._db.export_department_data ||
+      user.permissions._db.export_report
+    ) {
+      return true;
+    }
+  }
+  
+  // Fallback to allowlist
+  return reportPermissionService.isEmployeeAllowed(user.employee_code);
 };
 
 

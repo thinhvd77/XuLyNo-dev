@@ -13,6 +13,17 @@ function Report() {
   const isEmployeeDelegatedExporter = user?.role === 'employee' && isDelegatedExporter;
   const isMgrOrDeputy = user && (user.role === 'manager' || user.role === 'deputy_manager');
   const isManagerException = user && user.role === 'manager' && ['KHDN', 'KTGSNB'].includes(user.dept);
+  
+  // Check if user has department-level permissions (can see department data)
+  const hasDepartmentAccess = permissions?._db?.view_department_cases || 
+                              permissions?._db?.export_department_data || 
+                              permissions?._db?.export_department_cases ||
+                              isMgrOrDeputy || 
+                              isAdmin || 
+                              hasDefaultExport;
+  
+  // Only hide employee filter for users who can ONLY see their own cases
+  const shouldHideEmployeeFilter = isEmployeeDelegatedExporter && !hasDepartmentAccess;
   const hideBranchDeptForMgr = isDelegatedExporter && isMgrOrDeputy && !isManagerException;
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -44,8 +55,8 @@ function Report() {
   // Lấy danh sách options cho filter
   useEffect(() => {
     fetchFilterOptions();
-    if (isEmployeeDelegatedExporter) {
-      // No extra fetches needed for employee delegates
+    if (shouldHideEmployeeFilter) {
+      // No extra fetches needed for employee delegates with limited permissions
       return;
     }
     if (hideBranchDeptForMgr) {
@@ -53,11 +64,18 @@ function Report() {
       fetchEmployees(undefined, user?.dept || null);
       return;
     }
+    
+    // For employees with department access, load department employees
+    if (hasDepartmentAccess && user?.role === 'employee' && user?.dept) {
+      fetchEmployees(undefined, user.dept);
+      return;
+    }
+    
     // Default: load all filters
     fetchBranches();
     fetchDepartments();
     fetchEmployees();
-  }, [isEmployeeDelegatedExporter, hideBranchDeptForMgr, user?.dept]);
+  }, [shouldHideEmployeeFilter, hideBranchDeptForMgr, user?.dept, permissions?._db]);
 
   // Update filtered employees when branch or department filter changes
   useEffect(() => {
@@ -361,7 +379,7 @@ function Report() {
                 className={styles.filterSelect}
               >
                 <option value="">Tất cả trạng thái</option>
-                {filterOptions.statuses.map((status) => (
+                {(filterOptions.statuses || []).map((status) => (
                   <option key={status.value} value={status.value}>
                     {status.label}
                   </option>
@@ -426,7 +444,7 @@ function Report() {
             )}
 
             {/* CBTD */}
-            {!isEmployeeDelegatedExporter && (
+            {!shouldHideEmployeeFilter && (
               <div className={styles.filterGroup}>
                 <label>Cán bộ tín dụng</label>
                 <select

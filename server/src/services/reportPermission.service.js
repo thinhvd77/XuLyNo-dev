@@ -88,4 +88,23 @@ exports.removeAllowedEmployee = (employeeCode) => {
   return next;
 };
 
+/**
+ * Check if user has export report permission
+ * @param {Object} user - User object
+ * @returns {boolean} True if user can export reports
+ */
+exports.hasExportReportPermission = (user) => {
+  if (!user) return false;
+  
+  // Default-full-access departments
+  const deptDefault = ['KH&XLRR', 'KH&QLRR'];
+  
+  if (user.role === 'administrator') return true;
+  if (deptDefault.includes(user.dept)) return true;
+  
+  // If not admin and not in default dept, check allowlist
+  const allowlist = readWhitelist();
+  return allowlist.includes(user.employee_code);
+};
+
 

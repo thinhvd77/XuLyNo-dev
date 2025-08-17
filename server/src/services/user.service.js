@@ -354,49 +354,47 @@ exports.findOfficersByManager = async (manager) => {
  * MỚI: Lấy danh sách tất cả nhân viên để sử dụng cho filter dropdown
  */
 exports.getEmployeesForFilter = async (
-  directorBranchCode = null,
+  scopeBranchCode = null,
   selectedBranchCode = null,
   selectedDepartmentCode = null,
+  scopeDepartmentCode = null,
 ) => {
   try {
     logger.info('Starting to fetch employees for filter dropdown', {
-      directorBranchCode,
+      scopeBranchCode,
       selectedBranchCode,
       selectedDepartmentCode,
+      scopeDepartmentCode,
     });
-
-    if (!directorBranchCode) {
-      throw new Error('Director branch code is required');
-    }
 
     const userRepository = AppDataSource.getRepository('User');
 
-    // Build where condition based on director's branch
+    // Build where condition based on user's scope
     const whereCondition = {
       dept: In(['KH', 'KHDN', 'KHCN', 'PGD']),
       status: 'active',
     };
 
-    // Apply selected branch filter
+    // Apply scope-based filters first
+    if (scopeDepartmentCode) {
+      // User has department-level access - scope to their department
+      whereCondition.dept = scopeDepartmentCode;
+      logger.info(`Applying scope department filter: ${scopeDepartmentCode}`);
+    } else if (scopeBranchCode && scopeBranchCode !== '6421') {
+      // User has branch-level access (directors) - scope to their branch
+      whereCondition.branch_code = scopeBranchCode;
+      logger.info(`Applying scope branch filter: ${scopeBranchCode}`);
+    }
+
+    // Apply user-selected filters on top of scope
     if (selectedBranchCode && selectedBranchCode !== 'all') {
       whereCondition.branch_code = selectedBranchCode;
       logger.info(`Applying selected branch filter: ${selectedBranchCode}`);
-    } else {
-      // Branch-based access control if no specific branch selected
-      if (directorBranchCode !== '6421') {
-        // Non-6421 directors can only see employees from their own branch
-        whereCondition.branch_code = directorBranchCode;
-        logger.info(`Applying director branch filter: ${directorBranchCode}`);
-      } else {
-        // Directors from branch 6421 can see all employees
-        logger.info('Director from branch 6421 - showing all employees');
-      }
     }
 
-    // Apply selected department filter
     if (selectedDepartmentCode && selectedDepartmentCode !== 'all') {
       whereCondition.dept = selectedDepartmentCode;
-      logger.info(`Applying department filter: ${selectedDepartmentCode}`);
+      logger.info(`Applying selected department filter: ${selectedDepartmentCode}`);
     }
 
     let employees;
@@ -412,7 +410,8 @@ exports.getEmployeesForFilter = async (
     }
 
     logger.info(`Successfully retrieved ${employees.length} employees for filters`, {
-      directorBranchCode,
+      scopeBranchCode,
+      scopeDepartmentCode,
       selectedBranchCode,
       selectedDepartmentCode,
     });
